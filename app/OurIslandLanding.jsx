@@ -512,12 +512,18 @@ export default function OurIslandLanding() {
           <div className="fixed inset-0 z-50">
             <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={closeModal} />
             <motion.div
+              className="absolute left-1/2 top-1/2 z-50 w-[min(92vw,720px)] overflow-hidden rounded-3xl border border-white/10 bg-[#0B1222] text-white shadow-2xl"
+              style={{
+                translateX: "-50%",
+                translateY: "-50%",
+                boxShadow: `${(modalData?.colors?.[0] || "#fff")}55 0px 0px 80px inset`,
+              }}
               initial={{ opacity: 0, scale: 0.96, y: 12 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.96, y: 12 }}
-              className="absolute left-1/2 top-1/2 w-[min(92vw,720px)] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-3xl border border-white/10 bg-[#0B1222] text-white shadow-2xl"
-              style={{ boxShadow: `${(modalData?.colors?.[0] || "#fff")}55 0px 0px 80px inset` }}
-              role="dialog" aria-modal="true" aria-label={`${modalKind === "county" ? "County" : "City"} spotlight`}
+              role="dialog"
+              aria-modal="true"
+              aria-label={`${modalKind === "county" ? "County" : "City"} spotlight`}
             >
               {/* Banner */}
               <div className="relative h-40 w-full">
