@@ -108,7 +108,7 @@ const counties = [
 
 // --- Global Irish Cities (diaspora preview data) ---
 const diasporaCities = [
-  { name: "Boston, USA", colors: ["#169B62", "#FF883E", "#FFFFFF"], banner: "https://images.unsplash.com/photo-1541795795328-c82d6e7b530b?q=80&w=1600&auto=format&fit=crop", blurb: "Home to The Tam, JJ Foley’s; Southie & Seaport nights." },
+  { name: "Boston, USA", colors: ["#169B62", "#FF883E", "#FFFFFF"], banner: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFzOBzInqzzxAcKLgUgUNAOR5WeuoArl-4cQ&s", blurb: "Home to The Tam, JJ Foley’s; Southie & Seaport nights." },
   { name: "New York, USA", colors: ["#169B62", "#FFFFFF", "#FF883E"], banner: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1600&auto=format&fit=crop", blurb: "From McSorley’s to The Dead Rabbit; sessions & late clubs." },
   { name: "Chicago, USA", colors: ["#FF883E", "#169B62", "#FFFFFF"], banner: "https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1600&auto=format&fit=crop", blurb: "Northwest Side pubs; Celtic gigs and River North nights." },
   { name: "Philadelphia, USA", colors: ["#169B62", "#FFFFFF", "#FF883E"], banner: "https://images.unsplash.com/photo-1543573852-1a741367b8bf?q=80&w=1600&auto=format&fit=crop", blurb: "Fishtown venues; McGillin’s and trad spots." },
@@ -124,9 +124,11 @@ const diasporaCities = [
   { name: "Melbourne, Australia", colors: ["#FF883E", "#169B62", "#FFFFFF"], banner: "https://images.unsplash.com/photo-1508261301417-4d1b19b98ea5?q=80&w=1600&auto=format&fit=crop", blurb: "Southbank nights; Celtic Club lineage; great gigs." },
   { name: "Auckland, New Zealand", colors: ["#169B62", "#FF883E", "#FFFFFF"], banner: "https://images.unsplash.com/photo-1561542320-ead5f55f467d?q=80&w=1600&auto=format&fit=crop", blurb: "Viaduct bars and Kingsland sessions." },
   { name: "Buenos Aires, Argentina", colors: ["#169B62", "#FFFFFF", "#FF883E"], banner: "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?q=80&w=1600&auto=format&fit=crop", blurb: "San Telmo bars with lively expat sessions." },
-  { name: "Berlin, Germany", colors: ["#169B62", "#FFFFFF", "#FF883E"], banner: "https://images.unsplash.com/photo-1543783207-ec64e4d95325?q=80&w=1600&auto=format&fit=crop", blurb: "Irish sessions and indie clubs from Kreuzberg to Prenzlauer Berg." },
+  { name: "Berlin, Germany", colors: ["#169B62", "#FFFFFF", "#FF883E"], banner: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWstOTGDrwGLU7wdaKMuQ5f21OotZdnzLyLw&s", blurb: "Irish sessions and indie clubs from Kreuzberg to Prenzlauer Berg." },
   { name: "Newfoundland, Canada", colors: ["#FF883E", "#FFFFFF", "#169B62"], banner: "https://images.unsplash.com/photo-1530265670502-17439e6c8f73?q=80&w=1600&auto=format&fit=crop", blurb: "George Street, St. John’s—trad and late nights." },
   { name: "Paris, France", colors: ["#169B62", "#FF883E", "#FFFFFF"], banner: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=1600&auto=format&fit=crop", blurb: "Left Bank pubs; lively sessions and big nights." },
+  { name: "Beirut, Lebanon", colors: ["#169B62", "#FF883E", "#FFFFFF"], banner: "https://libshop.fr/wp-content/uploads/2019/07/mar-mikhael-gr97894.jpg", blurb: "Mar Mikhael to Gemmayze; lively pubs, coastal nights, and Irish charm in the Med." },
+  { name: "Athens, Greece", colors: ["#169B62", "#FF883E", "#FFFFFF"], banner: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvCS-mvgyyVrgSZRIOmDJpVuQGuHJ9XqZciA&s", blurb: "Plaka lanes to Gazi rooftops; pints, live trad, and warm Athenian buzz." },
 ];
 
 export default function OurIslandLanding() {
