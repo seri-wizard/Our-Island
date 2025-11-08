@@ -44,25 +44,25 @@ const teamsIndex = {
   // Rugby
   "munster": {
     name: "Munster Rugby",
-    logo: "https://upload.wikimedia.org/wikipedia/en/5/54/Munster_Rugby_logo.svg",
-    note: "7th in URC",
+    logo: "https://cdn.freebiesupply.com/logos/large/2x/munster-rugby-logo-svg-vector.svg",
+    note: "2nd in United Rugby Championship",
   },
   "leinster": {
     name: "Leinster Rugby",
-    logo: "https://upload.wikimedia.org/wikipedia/en/1/14/Leinster_rugby_logo.svg",
+    logo: "https://upload.wikimedia.org/wikipedia/fr/2/2c/Logo_Leinster_Rugby.svg",
     note: "URC contenders",
   },
   "connacht": {
     name: "Connacht Rugby",
-    logo: "https://upload.wikimedia.org/wikipedia/en/1/1b/Connacht_Rugby_logo.svg",
+    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/6/67/ConnachtRugby_2017logo.svg/1200px-ConnachtRugby_2017logo.svg.png",
     note: "URC",
   },
 
   // GAA (county)
   "kerry-gaa": {
     name: "Kerry GAA",
-    logo: "https://upload.wikimedia.org/wikipedia/en/4/4d/Kerry_GAA_crest.svg",
-    note: "Sam Maguire giants",
+    logo: "https://upload.wikimedia.org/wikipedia/en/3/39/Kerry_gaa_crest.png",
+    note: "Sam Maguire Winners 2025",
   },
   "dublin-gaa": {
     name: "Dublin GAA",
@@ -78,8 +78,8 @@ const teamsIndex = {
   // Football (soccer)
   "kerry-fc": {
     name: "Kerry FC",
-    logo: "https://upload.wikimedia.org/wikipedia/en/4/45/Kerry_FC_logo.png",
-    note: "League of Ireland",
+    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/8/8c/Kerry_FC_Crest.png/170px-Kerry_FC_Crest.png",
+    note: "9th League of Ireland First Division",
   },
   "shamrock-rovers": {
     name: "Shamrock Rovers",
