@@ -93,20 +93,27 @@ const teamsIndex = {
   },
 
   // Diaspora examples
-  "boston-gaa": {
-    name: "Boston GAA",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/8/8f/Gaelic_Athletic_Association_logo.svg",
-    note: "New England division",
-  },
-  "celtics": {
-    name: "Boston Celtics",
-    logo: "https://upload.wikimedia.org/wikipedia/en/8/8f/Boston_Celtics.svg",
-    note: "NBA",
-  },
-  "new-england-revolution": {
-    name: "New England Revolution",
-    logo: "https://upload.wikimedia.org/wikipedia/en/3/3c/New_England_Revolution_logo.svg",
-    note: "MLS",
+  {
+    "boston-gaa": {
+      "name": "Boston GAA",
+      "logo": "https://lh4.googleusercontent.com/proxy/g5swMco5bD83yxbhoItysnpGwQAxZQ5tahgb6aFphQsIk_tWo-1pElpcEHeauiq2FHuZKGqRk2pag64yp5Kvptd4IbknbCTWO6jSiooXRRyQFvPm4uUpuw",
+      "note": "USGAA Northeast champions 2025"
+    },
+    "celtics": {
+      "name": "Boston Celtics",
+      "logo": "https://upload.wikimedia.org/wikipedia/en/8/8f/Boston_Celtics.svg",
+      "note": "2nd in Eastern Conference"
+    },
+    "red-sox": {
+      "name": "Boston Red Sox",
+      "logo": "https://upload.wikimedia.org/wikipedia/en/6/6d/RedSoxPrimary_HangingSocks.svg",
+      "note": "3rd in AL East"
+    },
+    "bruins": {
+      "name": "Boston Bruins",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Boston_Bruins.svg/2048px-Boston_Bruins.svg.png",
+      "note": "8th in Atlantic Division"
+    }
   },
   "london-gaa": {
     name: "London GAA",
@@ -188,7 +195,7 @@ const diasporaCities = [
   {
     name: "Boston, USA",
     colors: ["#169B62", "#FF883E", "#FFFFFF"],
-    banner: "https://images.unsplash.com/photo-1541795795328-c82d6e7b530b?q=80&w=1600&auto=format&fit=crop",
+    banner: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/c8/60/0f/caption.jpg?w=800&h=500&s=1",
     blurb: "Home to The Tam, JJ Foley’s; Southie & Seaport nights.",
     details: {
       bestFor: ["Irish bars", "Sports nights", "Live music"],
@@ -196,9 +203,35 @@ const diasporaCities = [
       traditions: ["Parade day", "GAA weekends"],
       notableVenues: ["The Burren", "The Black Rose", "Mr. Dooley's"],
     },
-    teams: ["boston-gaa", "celtics", "new-england-revolution"],
+    teams: ["boston-gaa", "celtics", "bruins", "red-sox],
   },
   {
+    name: "London, UK",
+    colors: ["#FF883E", "#169B62", "#FFFFFF"],
+    banner: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1600&auto=format&fit=crop",
+    blurb: "Kilburn to Clapham; trad sessions and mega clubs.",
+    details: {
+      bestFor: ["Big nights", "Irish clubs", "Theatre"],
+      signatureDrink: "A porter in Kilburn",
+      traditions: ["London GAA", "St. Patrick's week"],
+      notableVenues: ["Tynecastle Arms (Irish-owned)", "Tommy Flynn's", "Auld Shillelagh"],
+    },
+    teams: ["london-gaa", "harlequins", "qpr"],
+  },
+    {
+    name: "Beirut, Lebanon",
+    colors: ["#169B62", "#FF883E", "#FFFFFF"],
+    banner: "https://libshop.fr/wp-content/uploads/2019/07/mar-mikhael-gr97894.jpg",
+    blurb: "Mar Mikhael to Gemmayze; lively pubs, coastal nights, and Irish charm in the Med.",
+    details: {
+      bestFor: ["Big nights", "Irish clubs", "Theatre"],
+      signatureDrink: "A porter in Kilburn",
+      traditions: ["London GAA", "St. Patrick's week"],
+      notableVenues: ["Tynecastle Arms (Irish-owned)", "Tommy Flynn's", "Auld Shillelagh"],
+    },
+    teams: ["london-gaa", "harlequins", "qpr"],
+  },
+    {
     name: "London, UK",
     colors: ["#FF883E", "#169B62", "#FFFFFF"],
     banner: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1600&auto=format&fit=crop",
@@ -375,7 +408,7 @@ export default function OurIslandLanding() {
       <section id="counties" className="relative z-10 px-6">
         <div className="mx-auto max-w-7xl py-8">
           <div className="mb-6 flex items-end justify-between">
-            <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">Explore by county</h2>
+            <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">Explore the Island</h2>
             <a href="#map" className="text-sm text-white/70 hover:text-white">View full map →</a>
           </div>
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
@@ -402,7 +435,7 @@ export default function OurIslandLanding() {
       <section id="diaspora" className="relative z-10 px-6">
         <div className="mx-auto max-w-7xl py-8">
           <div className="mb-6 flex items-end justify-between">
-            <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">Islands Abroad — the Irish worldwide</h2>
+            <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">The Island Abroad — the Irish worldwide</h2>
             <a href="#map" className="text-sm text-white/70 hover:text-white">View global map →</a>
           </div>
           <p className="mb-6 max-w-3xl text-sm text-white/70">Our island stretches far beyond its shores. From Sydney to Chicago, the spirit of Ireland lives wherever the craic carries us.</p>
