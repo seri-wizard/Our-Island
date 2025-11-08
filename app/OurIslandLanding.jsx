@@ -204,7 +204,7 @@ const diasporaCities = [
       traditions: ["Parade day", "GAA weekends"],
       notableVenues: ["The Burren", "The Black Rose", "Mr. Dooley's"],
     },
-    teams: ["boston-gaa", "celtics", "bruins", "red-sox],
+    teams: ["boston-gaa", "celtics", "bruins", "red-sox"],
   },
   {
     name: "London, UK",
