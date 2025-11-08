@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MapPin, Music2, ShieldCheck, Beer, Laugh, Sparkles } from "lucide-react";
