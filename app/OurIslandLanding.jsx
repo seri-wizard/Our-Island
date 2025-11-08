@@ -93,7 +93,7 @@ const teamsIndex = {
   },
 
   // Diaspora examples
-  {
+  
     "boston-gaa": {
       "name": "Boston GAA",
       "logo": "https://lh4.googleusercontent.com/proxy/g5swMco5bD83yxbhoItysnpGwQAxZQ5tahgb6aFphQsIk_tWo-1pElpcEHeauiq2FHuZKGqRk2pag64yp5Kvptd4IbknbCTWO6jSiooXRRyQFvPm4uUpuw",
@@ -113,8 +113,9 @@ const teamsIndex = {
       "name": "Boston Bruins",
       "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Boston_Bruins.svg/2048px-Boston_Bruins.svg.png",
       "note": "8th in Atlantic Division"
-    }
-  },
+    },
+  
+  
   "london-gaa": {
     name: "London GAA",
     logo: "https://upload.wikimedia.org/wikipedia/commons/8/8f/Gaelic_Athletic_Association_logo.svg",
