@@ -112,6 +112,8 @@ const diasporaCities = [
   { name: "Beirut, Lebanon", colors: ["#169B62", "#FF883E", "#FFFFFF"], banner: "https://libshop.fr/wp-content/uploads/2019/07/mar-mikhael-gr97894.jpg", blurb: "Mar Mikhael to Gemmayze; lively pubs, coastal nights, and Irish charm in the Med." },  
   { name: "Athens, Greece", colors: ["#169B62", "#FF883E", "#FFFFFF"], banner: "https://athenscabs.com/wp-content/uploads/2025/01/Athens-Greece-Nightlife.webp", blurb: "Plaka lanes to Gazi rooftops; pints, live trad, and warm Athenian buzz." },
   { name: "Berlin, Germany", colors: ["#169B62", "#FFFFFF", "#FF883E"], banner: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/ce/79/51/coole-70er-mobel.jpg?w=900&h=500&s=1", blurb: "Irish sessions and indie clubs from Kreuzberg to Prenzlauer Berg." },
+  { name: "Seoul, South Korea", colors: ["#169B62", "#FFFFFF", "#FF883E"], banner: "https://travelsetu.com/apps/uploads/new_destinations_photos/destination/2024/07/02/514aba4a6e7e64bc37dd23c90762c1be_1000x1000.jpg", blurb: "Itaewon and Hongdae nights; Irish pubs and K-fusion sessions." },
+  { name: "Tokyo, Japan", colors: ["#FF883E", "#169B62", "#FFFFFF"], banner: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2AL17Gmw6qtcAp9kSZJy9vhg4hFfRLSUAUQ&s", blurb: "Shinjuku pints, Shibuya rhythm; Irish heart in neon lights." },
   { name: "New York, USA", colors: ["#169B62", "#FFFFFF", "#FF883E"], banner: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1600&auto=format&fit=crop", blurb: "From McSorley’s to The Dead Rabbit; sessions & late clubs." },
   { name: "Chicago, USA", colors: ["#FF883E", "#169B62", "#FFFFFF"], banner: "https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1600&auto=format&fit=crop", blurb: "Northwest Side pubs; Celtic gigs and River North nights." },
   { name: "Philadelphia, USA", colors: ["#169B62", "#FFFFFF", "#FF883E"], banner: "https://images.unsplash.com/photo-1543573852-1a741367b8bf?q=80&w=1600&auto=format&fit=crop", blurb: "Fishtown venues; McGillin’s and trad spots." },
@@ -390,7 +392,7 @@ export default function OurIslandLanding() {
       <section id="counties" className="relative z-10 px-6">
         <div className="mx-auto max-w-7xl py-8">
           <div className="mb-6 flex items-end justify-between">
-            <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">Explore by county</h2>
+            <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">Explore the Island</h2>
             <a href="#map" className="text-sm text-white/70 hover:text-white">
               View full map →
             </a>
@@ -458,7 +460,7 @@ export default function OurIslandLanding() {
       <section id="diaspora" className="relative z-10 px-6">
         <div className="mx-auto max-w-7xl py-8">
           <div className="mb-6 flex items-end justify-between">
-            <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">Islands Abroad — the Irish worldwide</h2>
+            <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">The Island Abroad — the Irish worldwide</h2>
             <a href="#map" className="text-sm text-white/70 hover:text-white">View global map →</a>
           </div>
           <p className="mb-6 max-w-3xl text-sm text-white/70">Our island stretches far beyond its shores. From Sydney to Chicago, the spirit of Ireland lives wherever the craic carries us.</p>
