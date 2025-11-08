@@ -204,7 +204,7 @@ const diasporaCities = [
       traditions: ["Parade day", "GAA weekends"],
       notableVenues: ["The Burren", "The Black Rose", "Mr. Dooley's"],
     },
-    teams: ["boston-gaa", "celtics", "bruins", "red-sox"],
+    teams: ["boston-gaa", "celtics", "red-sox", "bruins"],
   },
   {
     name: "London, UK",
@@ -508,7 +508,6 @@ export default function OurIslandLanding() {
                     <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                       {modalData.teams.map((slug) => <TeamBadge key={slug} slug={slug} />)}
                     </div>
-                    <div className="mt-3 text-xs text-white/60">Editing teams? Update <code>teamsIndex</code> and reference by slug in each place.</div>
                   </div>
                 ) : null}
               </div>
