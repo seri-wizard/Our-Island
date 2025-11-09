@@ -197,6 +197,32 @@ const counties = [
     teams: ["munster", "kerry-gaa", "kerry-fc"],
   },
   {
+    name: "Carlow",
+    colors: ["#D7263D", "#169B62", "#F6C324"],
+    banner: "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSzC2oztVwcqbDUTM-o-CSOqFlVsftvmVDUC9-OcaOSsWAC34fHCkJexh0bgYLUDZC4GAaDQhjgTHb1y7a8xdMsMrOYsu484jb9CMySWcLOOkJTF53KlFA5Flo22IaTIK5UNzZD4=w540-h312-n-k-no",
+    blurb: "Temple Bar to Portobello; Whelan’s & Workman’s.",
+    details: {
+      bestFor: ["Live gigs", "Nightlife", "Museums"],
+      signatureDrink: "A pint near Grafton",
+      traditions: ["Trad sessions", "Storytelling"],
+      notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
+    },
+    teams: ["leinster", "dublin-gaa", "shamrock-rovers"],
+  },
+  {
+    name: "Cavan",
+    colors: ["#0046AD", "#FFFFFF"],
+    banner: "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcRMddqSOSCMjHsHvJG1qeTMbomsOOIh4yXlo8D-qycQ67GWqSwWNNdtlvQGzDTzxi70aWMzpHbtdtRTgQAuFXoEquHH&s=19",
+    blurb: "Temple Bar to Portobello; Whelan’s & Workman’s.",
+    details: {
+      bestFor: ["Live gigs", "Nightlife", "Museums"],
+      signatureDrink: "A pint near Grafton",
+      traditions: ["Trad sessions", "Storytelling"],
+      notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
+    },
+    teams: ["leinster", "dublin-gaa", "shamrock-rovers"],
+  },
+  {
     name: "Dublin",
     colors: ["#6EC1E4", "#0C2D48"],
     banner: "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcSeG_a09sFzRLMSq5kr_ZTUI_-nDdO1ldztmwn_2HJuNLEbt4CR6lJbfxCCfGmTb9x9CK2geuF4lFQtBKERzOmz_KY&s=19",
@@ -212,7 +238,7 @@ const counties = [
   {
     name: "Galway",
     colors: ["#7A1F5C", "#FFFFFF"],
-    banner: "https://images.unsplash.com/photo-1470770903676-69b98201ea1c?q=80&w=1200&auto=format&fit=crop",
+    banner: "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSydXHWkuMzXiLpZHXoI6uNshU6FlzoyhkZeAfJvdLps3TGIChcRmbPuwT_LA0Vgewdvllqa02-mWMOJh-s8PsqJxUrozxgsO2PohPjcOS-SXf7SmaLi7GpkB_58IW0-JpfAzze65g=w540-h312-n-k-no",
     blurb: "Latin Quarter buskers; Tig Chóilí & Róisín Dubh.",
     details: {
       bestFor: ["Buskers", "Trad", "Nightlife"],
