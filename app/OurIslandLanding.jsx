@@ -410,7 +410,7 @@ export default function OurIslandLanding() {
       {/* Stats strip */}
 <section className="relative z-10 px-6">
 <div className="mx-auto max-w-7xl">
-<div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+<div className="grid grid-cols-1 gap-4 md:grid-cols-4">
 {[{
 label: "Population (est.)",
 value: islandStats.population,
@@ -419,7 +419,11 @@ sub: "On the island",
 label: "Island size",
 value: `${islandStats.sizeKm2} km²`,
 sub: "Land area",
-}, {
+},{
+label: "Island size",
+value: `${islandStats.sizeKm2} km²`,
+sub: "Land area",
+},{
 label: "Counties",
 value: `${islandStats.counties}`,
 sub: "Across the island",
