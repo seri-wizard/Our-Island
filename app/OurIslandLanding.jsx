@@ -58,12 +58,17 @@ const teamsIndex = {
   "leinster": {
     name: "Leinster Rugby",
     logo: "https://upload.wikimedia.org/wikipedia/fr/2/2c/Logo_Leinster_Rugby.svg",
-    note: "URC contenders",
+    note: "7th in United Rugby Championship",
   },
   "connacht": {
     name: "Connacht Rugby",
     logo: "https://upload.wikimedia.org/wikipedia/en/thumb/6/67/ConnachtRugby_2017logo.svg/1200px-ConnachtRugby_2017logo.svg.png",
-    note: "URC",
+    note: "12th in United Rugby Championship",
+  },
+  "ulster": {
+    name: "Ulster Rugby",
+    logo: "https://upload.wikimedia.org/wikipedia/fr/thumb/c/c0/Ulster_Rugby_logo.svg/2048px-Ulster_Rugby_logo.svg.png",
+    note: "5th in United Rugby Championship",
   },
 
   // GAA (county)
@@ -168,7 +173,7 @@ const counties = [
       traditions: ["Set dancing", "Match nights"],
       notableVenues: ["Dick Mack's (Dingle)", "Courtney's (Killarney)", "O'Connor's (Doolin)"]
     },
-    teams: ["munster", "kerry-gaa", "kerry-fc"],
+    teams: ["ulster", "kerry-gaa", "kerry-fc"],
   },
   {
     name: "Armagh",
@@ -181,7 +186,7 @@ const counties = [
       traditions: ["Set dancing", "Match nights"],
       notableVenues: ["Dick Mack's (Dingle)", "Courtney's (Killarney)", "O'Connor's (Doolin)"]
     },
-    teams: ["munster", "kerry-gaa", "kerry-fc"],
+    teams: ["ulster", "kerry-gaa", "kerry-fc"],
   },  
   {
     name: "Carlow",
@@ -207,7 +212,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["leinster", "dublin-gaa", "shamrock-rovers"],
+    teams: ["ulster", "dublin-gaa", "shamrock-rovers"],
   },
   {
     name: "Clare",
@@ -220,7 +225,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["leinster", "dublin-gaa", "shamrock-rovers"],
+    teams: ["munster", "dublin-gaa", "shamrock-rovers"],
   },
   {
     name: "Cork",
@@ -233,7 +238,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["leinster", "dublin-gaa", "shamrock-rovers"],
+    teams: ["munster", "dublin-gaa", "shamrock-rovers"],
   },
   {
     name: "Derry",
@@ -246,7 +251,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["leinster", "dublin-gaa", "shamrock-rovers"],
+    teams: ["ulster", "dublin-gaa", "shamrock-rovers"],
   },
   {
     name: "Donegal",
@@ -259,7 +264,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["leinster", "dublin-gaa", "shamrock-rovers"],
+    teams: ["ulster", "dublin-gaa", "shamrock-rovers"],
   },
   {
     name: "Down",
@@ -272,7 +277,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["leinster", "dublin-gaa", "shamrock-rovers"],
+    teams: ["ulster", "dublin-gaa", "shamrock-rovers"],
   },
   {
     name: "Dublin",
@@ -286,6 +291,19 @@ const counties = [
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
     teams: ["leinster", "dublin-gaa", "shamrock-rovers"],
+  },
+    {
+    name: "Fermanagh",
+    colors: ["#169B62", "#FFFFFF"],
+    banner: "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSy13sq_KK_FVZ3bMFuoP_fXB-_lVz6dFf7gcfpkX_dcwS8nBORoug6Ooskn7KTHD6UZkh0bVQ7VsGJi67OMPjjcu5-tEH2lCH2v0f247MdMh9I0_zsDmtgsuCL5gzqychm9D-Vt=w540-h312-n-k-no",
+    blurb: "Temple Bar to Portobello; Whelan’s & Workman’s.",
+    details: {
+      bestFor: ["Live gigs", "Nightlife", "Museums"],
+      signatureDrink: "A pint near Grafton",
+      traditions: ["Trad sessions", "Storytelling"],
+      notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
+    },
+    teams: ["ulster", "dublin-gaa", "shamrock-rovers"],
   },
   {
     name: "Galway",
@@ -312,6 +330,19 @@ const counties = [
       notableVenues: ["Dick Mack's (Dingle)", "Courtney's (Killarney)", "O'Connor's (Doolin)"]
     },
     teams: ["munster", "kerry-gaa", "kerry-fc"],
+  },
+    {
+    name: "Kildare",
+    colors: ["#FFFFFF", "#0A0F1C"],
+    banner: "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSxHJ75lZNcfeXO5JoLQLqhuDxi2MMakvwpY8PlUzJe43WJLdDsiWGRmsJaklPiZ7rqJYKhtwxkbyFG2DYIb31XXvML2ql7reBacxYZ_XPX6zCSWX_GMjRtWhoHcq0PF__YB23s9Cw=w540-h312-n-k-no",
+    blurb: "Temple Bar to Portobello; Whelan’s & Workman’s.",
+    details: {
+      bestFor: ["Live gigs", "Nightlife", "Museums"],
+      signatureDrink: "A pint near Grafton",
+      traditions: ["Trad sessions", "Storytelling"],
+      notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
+    },
+    teams: ["leinster", "dublin-gaa", "shamrock-rovers"],
   }
   // ... keep the rest of your counties here (they will fall back to defaults if details/teams omitted)
 ];
