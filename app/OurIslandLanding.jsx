@@ -440,11 +440,35 @@ className="rounded-3xl border border-white/10 bg-white/5 p-5"
 </div>
 </div>
 </section>
-
+<section className="relative z-10 px-6 pb-10">
       {/* Marquee */}
       <section className="relative z-10 border-y border-white/10 bg-white/5 py-3">
         <div className="overflow-hidden"><div className="animate-marquee whitespace-nowrap">{["Trad Sessions", "Festival Nights", "Civil Defence", "Pub Culture", "Local Heroes", "Irish Language", "Coastal Rescues"].map((t, idx) => (<span key={idx} className="mx-6 inline-flex items-center gap-2"><span className="h-1.5 w-1.5 rounded-full" style={{ background: palette.green }} /> {t}<span className="h-1.5 w-1.5 rounded-full" style={{ background: palette.orange }} /></span>))}{["Trad Sessions", "Festival Nights", "Civil Defence", "Pub Culture", "Local Heroes", "Irish Language", "Coastal Rescues"].map((t, idx) => (<span key={`d-${idx}`} className="mx-6 inline-flex items-center gap-2"><span className="h-1.5 w-1.5 rounded-full" style={{ background: palette.green }} /> {t}<span className="h-1.5 w-1.5 rounded-full" style={{ background: palette.orange }} /></span>))}</div></div>
       </section>
+  {/* ------------------------------ Features ------------------------------ */}
+<section id="culture" className="relative z-10 px-6">
+<div className="mx-auto max-w-7xl py-16">
+<div className="mb-8 flex items-end justify-between">
+<h2 className="text-2xl font-semibold tracking-tight md:text-3xl">What you'll find on launch</h2>
+<a href="#notify" className="text-sm text-white/70 hover:text-white">Get notified →</a>
+</div>
+<div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+{features.map(({ title, icon: Icon, desc, tag, color }, i) => (
+<motion.div key={title} className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-5" initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.05 }}>
+<div className="absolute -right-10 -top-10 h-36 w-36 rounded-full opacity-10 blur-2xl" style={{ background: color }} />
+<div className="mb-2 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-2 py-1 text-[10px] text-white/70"><span className="h-1.5 w-1.5 rounded-full" style={{ background: color }} /> {tag}</div>
+<div className="mb-3 flex items-center gap-3">
+<div className="grid h-10 w-10 place-items-center rounded-xl border border-white/10 bg-white/5"><Icon className="h-5 w-5" /></div>
+<h3 className="text-lg font-medium">{title}</h3>
+</div>
+<p className="text-sm text-white/80">{desc}</p>
+<div className="mt-4 text-sm text-white/70">Learn more →</div>
+<div className="absolute inset-0 rounded-3xl opacity-0 transition group-hover:opacity-100" style={{ boxShadow: `inset 0 0 0 1px ${color}33` }} />
+</motion.div>
+))}
+</div>
+</div>
+</section>
 
       {/* Counties */}
       <section id="counties" className="relative z-10 px-6">
