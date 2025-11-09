@@ -440,7 +440,7 @@ className="rounded-3xl border border-white/10 bg-white/5 p-5"
 </div>
 </div>
 </section>
-<section className="relative z-10 px-6 pb-10">
+<section className="relative z-10 px-6 pb-10"> </section>
       {/* Marquee */}
       <section className="relative z-10 border-y border-white/10 bg-white/5 py-3">
         <div className="overflow-hidden"><div className="animate-marquee whitespace-nowrap">{["Trad Sessions", "Festival Nights", "Civil Defence", "Pub Culture", "Local Heroes", "Irish Language", "Coastal Rescues"].map((t, idx) => (<span key={idx} className="mx-6 inline-flex items-center gap-2"><span className="h-1.5 w-1.5 rounded-full" style={{ background: palette.green }} /> {t}<span className="h-1.5 w-1.5 rounded-full" style={{ background: palette.orange }} /></span>))}{["Trad Sessions", "Festival Nights", "Civil Defence", "Pub Culture", "Local Heroes", "Irish Language", "Coastal Rescues"].map((t, idx) => (<span key={`d-${idx}`} className="mx-6 inline-flex items-center gap-2"><span className="h-1.5 w-1.5 rounded-full" style={{ background: palette.green }} /> {t}<span className="h-1.5 w-1.5 rounded-full" style={{ background: palette.orange }} /></span>))}</div></div>
