@@ -36,9 +36,10 @@ const features = [
 
 // Quick island stats displayed under the hero
 const islandStats = {
-  population: "7.1M", // editable
+  population: "7.186M", // editable
   sizeKm2: "84,421", // editable (km²)
-  counties: 32, // fixed
+  coastline: "7,527", // fixed
+  highest: "1,041"
 };
 
 /**
@@ -416,17 +417,17 @@ label: "Population (est.)",
 value: islandStats.population,
 sub: "On the island",
 }, {
-label: "Island size",
+label: "Island Size",
 value: `${islandStats.sizeKm2} km²`,
 sub: "Land area",
 },{
-label: "Island size",
-value: `${islandStats.sizeKm2} km²`,
-sub: "Land area",
+label: "Coastline",
+value: `${islandStats.coastline} km`,
+sub: "Length",
 },{
-label: "Counties",
-value: `${islandStats.counties}`,
-sub: "Across the island",
+label: "Heighest Point",
+value: `${islandStats.highest} km`,
+sub: "Carrauntoohil",
 }].map(({ label, value, sub }, i) => (
 <motion.div
 key={label}
