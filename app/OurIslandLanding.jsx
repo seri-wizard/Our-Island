@@ -104,6 +104,16 @@ const teamsIndex = {
     logo: "https://cdn.leverade.com/thumbnails/Aa1Xk5bKOmVR.500x500.jpg",
     note: "2nd Domino's Men's Super League",
   },
+  "tralee-warriors": {
+    name: "Garvey's Tralee Warriors",
+    logo: "https://cdn.leverade.com/thumbnails/Aarpdok6b7tG.500x500.jpg",
+    note: "5th Domino's Men's Super League",
+  },
+  "kcyms": {
+    name: "K.C.Y.M.S Basketball Club",
+    logo: "https://cdn.leverade.com/thumbnails/AabqhiDw2fWa.500x500.jpg",
+    note: "7th Domino's Men's Super League",
+  },
 
   // Football (soccer)
   "kerry-fc": {
@@ -738,7 +748,7 @@ export default function OurIslandLanding() {
         traditions: item?.details?.traditions || ["Trad sessions", "Match nights"],
         notableVenues: item?.details?.notableVenues || ["Beloved locals", "Great music rooms"],
       },
-      teams: Array.isArray(item?.teams) && item.teams.length ? item.teams.slice(0, 4) : [],
+      teams: Array.isArray(item?.teams) && item.teams.length ? item.teams.slice(0, 6) : [],
       motto: item?.motto || (kind === "county" ? "Small island, giant heart." : "Far from home, close to heart."),
       prideQuote: item?.prideQuote || (kind === "county" ? `I'm from ${name}, what an awesome place.` : `${name} — the island extended.`),
     };
