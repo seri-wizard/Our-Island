@@ -36,7 +36,7 @@ const features = [
 
 // Quick island stats displayed under the hero
 const islandStats = {
-  population: "7.186M", // editable
+  population: "7.2M", // editable
   sizeKm2: "84,421", // editable (km²)
   coastline: "7,527", // fixed
   highest: "1,041"
@@ -421,13 +421,13 @@ label: "Island Size",
 value: `${islandStats.sizeKm2} km²`,
 sub: "Land area",
 },{
+label: "Heighest Point",
+value: `${islandStats.highest} m`,
+sub: "Carrauntoohil",
+},{
 label: "Coastline",
 value: `${islandStats.coastline} km`,
 sub: "Length",
-},{
-label: "Heighest Point",
-value: `${islandStats.highest} km`,
-sub: "Carrauntoohil",
 }].map(({ label, value, sub }, i) => (
 <motion.div
 key={label}
