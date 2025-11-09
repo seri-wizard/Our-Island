@@ -88,6 +88,23 @@ const teamsIndex = {
     note: "Football & Hurling power",
   },
 
+  "belfast-giants": {
+    name: "Belfast Giants",
+    logo: "https://www.eliteleague.co.uk/photo/team/team_4.png",
+    note: "6th Elite Ice Hockey League",
+  },
+
+  "belfast-star": {
+    name: "Belfast Star Basketball Club",
+    logo: "https://cdn.leverade.com/thumbnails/AaaX4E8ZU0JP.500x500.jpg",
+    note: "1st Domino's Men's Super League",
+  },
+  "ballincollig-basketball": {
+    name: "Ballincollig Basketball Club",
+    logo: "https://cdn.leverade.com/thumbnails/Aa1Xk5bKOmVR.500x500.jpg",
+    note: "2nd Domino's Men's Super League",
+  },
+
   // Football (soccer)
   "kerry-fc": {
     name: "Kerry F.C.",
@@ -238,7 +255,7 @@ const counties = [
       traditions: ["Set dancing", "Match nights"],
       notableVenues: ["Dick Mack's (Dingle)", "Courtney's (Killarney)", "O'Connor's (Doolin)"]
     },
-    teams: ["ulster", "kerry-gaa", "kerry-fc"],
+    teams: ["ulster", "belfast-star", "belfast-giants"],
   },
   {
     name: "Armagh",
@@ -303,7 +320,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["munster", "cobh-fc", "cork-fc"],
+    teams: ["munster", "cobh-fc", "cork-fc", "ballincollig-basketball"],
   },
   {
     name: "Derry",
