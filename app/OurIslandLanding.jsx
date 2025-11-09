@@ -421,7 +421,7 @@ const counties = [
       traditions: ["Set dancing", "Match nights"],
       notableVenues: ["Dick Mack's (Dingle)", "Courtney's (Killarney)", "O'Connor's (Doolin)"]
     },
-    teams: ["munster", "kerry-gaa", "kerry-fc"],
+    teams: ["munster", "kerry-gaa", "kerry-fc", "tralee-warriors", "kcyms"],
   },
   {
     name: "Kildare",
