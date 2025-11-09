@@ -34,6 +34,13 @@ const features = [
   { title: "Places", icon: MapPin, color: palette.orange, desc: "A living map of pubs, halls, stages, and hidden gems.", tag: "Directory" },
 ];
 
+// Quick island stats displayed under the hero
+const islandStats = {
+  population: "7.1M", // editable
+  sizeKm2: "84,421", // editable (km²)
+  counties: 32, // fixed
+};
+
 /**
  * TEAMS DIRECTORY (central, linkable)
  * - key: team slug
@@ -399,6 +406,40 @@ export default function OurIslandLanding() {
           </motion.div>
         </div>
       </section>
+
+      {/* Stats strip */}
+<section className="relative z-10 px-6">
+<div className="mx-auto max-w-7xl">
+<div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+{[{
+label: "Population (est.)",
+value: islandStats.population,
+sub: "On the island",
+}, {
+label: "Island size",
+value: `${islandStats.sizeKm2} km²`,
+sub: "Land area",
+}, {
+label: "Counties",
+value: `${islandStats.counties}`,
+sub: "Across the island",
+}].map(({ label, value, sub }, i) => (
+<motion.div
+key={label}
+initial={{ opacity: 0, y: 10 }}
+whileInView={{ opacity: 1, y: 0 }}
+viewport={{ once: true }}
+transition={{ delay: i * 0.05 }}
+className="rounded-3xl border border-white/10 bg-white/5 p-5"
+>
+<div className="text-[12px] uppercase tracking-wide text-white/60">{label}</div>
+<div className="mt-1 text-3xl font-semibold tracking-tight md:text-4xl">{value}</div>
+<div className="mt-1 text-xs text-white/60">{sub}</div>
+</motion.div>
+))}
+</div>
+</div>
+</section>
 
       {/* Marquee */}
       <section className="relative z-10 border-y border-white/10 bg-white/5 py-3">
