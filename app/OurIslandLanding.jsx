@@ -114,6 +114,16 @@ const teamsIndex = {
     logo: "https://cdn.leverade.com/thumbnails/AabqhiDw2fWa.500x500.jpg",
     note: "7th Domino's Men's Super League",
   },
+  "limerick-celtics": {
+    name: "Limerick Celtics",
+    logo: "https://cdn.leverade.com/thumbnails/AaN4nFe6xFpC.500x500.jpg",
+    note: "8th Domino's Men's Super League",
+  },
+  "sligo-basketball": {
+    name: "EJ Sligo All-Stars",
+    logo: "https://cdn.leverade.com/thumbnails/AaFrHWurA8NT.500x500.jpg",
+    note: "9th Domino's Men's Super League",
+  },  
 
   // Football (soccer)
   "kerry-fc": {
@@ -486,7 +496,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["munster", "treaty-fc", "shamrock-rovers"],
+    teams: ["munster", "treaty-fc", "limerick-celtics"],
   },
   {
     name: "Longford",
@@ -591,7 +601,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["connacht", "sligo-fc", "shamrock-rovers"],
+    teams: ["connacht", "sligo-fc", "sligo-basketball"],
   },
   {
     name: "Tipperary",
