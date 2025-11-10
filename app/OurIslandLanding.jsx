@@ -227,6 +227,34 @@ const teamsIndex = {
     note: "1st in League of Ireland Men's Premier Division",
   },
 
+
+  "coleraine-fc": {
+    name: "Coleraine F.C.",
+    logo: "https://www.nifootballleague.com/media/7497/webcrest-coleraine-300x300.png",
+    note: "1st in Northern Ireland Football Premiership",
+  },
+  "larne-fc": {
+    name: "Larne F.C.",
+    logo: "https://www.nifootballleague.com/media/2076/webcrest-larne-300x300.png",
+    note: "2nd in Northern Ireland Football Premiership",
+  },
+  "glentoran-fc": {
+    name: "Glentoran F.C.",
+    logo: "https://www.nifootballleague.com/media/2072/webcrest-glentoran-300x300.png",
+    note: "3rd in Northern Ireland Football Premiership",
+  },
+  "linfield-fc": {
+    name: "Linfield F.C.",
+    logo: "https://www.nifootballleague.com/media/2078/webcrest-linfield-300x300.png",
+    note: "4th in Northern Ireland Football Premiership",
+  },  
+  "dungannon-fc": {
+    name: "Dungannon Swifts F.C.",
+    logo: "https://www.nifootballleague.com/media/2070/webcrest-dungannon-swifts-300x300.png",
+    note: "5th in Northern Ireland Football Premiership",
+  }, 
+  
+
   // Diaspora examples
   
     "boston-gaa": {
@@ -295,7 +323,7 @@ const counties = [
       traditions: ["Set dancing", "Match nights"],
       notableVenues: ["Dick Mack's (Dingle)", "Courtney's (Killarney)", "O'Connor's (Doolin)"]
     },
-    teams: ["ulster", "belfast-star", "belfast-giants"],
+    teams: ["ulster", "belfast-star", "belfast-giants", "larne-fc", "glentoran-fc", "linfield-fc"],
   },
   {
     name: "Armagh",
@@ -373,7 +401,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["ulster", "derry-fc", "shamrock-rovers"],
+    teams: ["ulster", "derry-fc", "coleraine-fc"],
   },
   {
     name: "Donegal",
@@ -647,7 +675,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["ulster", "dublin-gaa", "shamrock-rovers"],
+    teams: ["ulster", "dungannon-fc", "shamrock-rovers"],
   },
   {
     name: "Waterford",
