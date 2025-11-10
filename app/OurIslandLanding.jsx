@@ -1113,16 +1113,6 @@ className="rounded-3xl border border-white/10 bg-white/5 p-5"
                     </div>
                   </div>
                 ) : null}
-
-                {modalData?.teams?.length ? (
-                  <div className="mt-6">
-                    <div className="mb-2 text-xs text-white/60">Basketball</div>
-                    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                      {modalData.teams.map((slug) => <TeamBadge key={slug} slug={slug} />)}
-                    </div>
-                  </div>
-                ) : null}
-                
               </div>
             </motion.div>
           </div>
