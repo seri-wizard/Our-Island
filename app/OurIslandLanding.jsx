@@ -1069,7 +1069,7 @@ className="rounded-3xl border border-white/10 bg-white/5 p-5"
           <div className="fixed inset-0 z-50">
             <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={closeModal} />
             <motion.div
-              className="absolute left-1/2 top-1/2 z-50 w-[min(92vw,720px)] overflow-hidden rounded-3xl border border-white/10 bg-[#0B1222] text-white shadow-2xl"
+              className="absolute left-1/2 top-1/2 z-50 w-[min(92vw,720px)] max-h-[90vh] overflow-y-auto rounded-3xl border border-white/10 bg-[#0B1222] text-white shadow-2xl"
               style={{ translateX: "-50%", translateY: "-50%", boxShadow: `${(modalData?.colors?.[0] || "#fff")}55 0px 0px 80px inset` }}
               initial={{ opacity: 0, scale: 0.96, y: 12 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -1107,7 +1107,7 @@ className="rounded-3xl border border-white/10 bg-white/5 p-5"
                 {/* Linked teams */}
                 {modalData?.teams?.length ? (
                   <div className="mt-6">
-                    <div className="mb-2 text-xs text-white/60">Sports teams</div>
+                    <div className="mb-2 text-xs text-white/60">Football</div>
                     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                       {modalData.teams.map((slug) => <TeamBadge key={slug} slug={slug} />)}
                     </div>
@@ -1116,7 +1116,7 @@ className="rounded-3xl border border-white/10 bg-white/5 p-5"
 
                 {modalData?.teams?.length ? (
                   <div className="mt-6">
-                    <div className="mb-2 text-xs text-white/60">Sports teams</div>
+                    <div className="mb-2 text-xs text-white/60">Basketball</div>
                     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                       {modalData.teams.map((slug) => <TeamBadge key={slug} slug={slug} />)}
                     </div>
