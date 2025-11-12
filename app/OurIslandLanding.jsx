@@ -336,7 +336,7 @@ const counties = [
       traditions: ["Set dancing", "Match nights"],
       notableVenues: ["Dick Mack's (Dingle)", "Courtney's (Killarney)", "O'Connor's (Doolin)"]
     },
-    teams: ["ulster", "kerry-gaa", "kerry-fc"],
+    teams: ["ulster"],
   },  
   {
     name: "Carlow",
@@ -349,7 +349,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["leinster", "dublin-gaa", "shamrock-rovers"],
+    teams: ["leinster"],
   },
   {
     name: "Cavan",
@@ -362,7 +362,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["ulster", "dublin-gaa", "shamrock-rovers"],
+    teams: ["ulster"],
   },
   {
     name: "Clare",
@@ -375,7 +375,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["munster", "dublin-gaa", "shamrock-rovers"],
+    teams: ["munster"],
   },
   {
     name: "Cork",
@@ -414,7 +414,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["ulster", "finn-fc", "shamrock-rovers"],
+    teams: ["ulster", "finn-fc"],
   },
   {
     name: "Down",
@@ -427,7 +427,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["ulster", "dublin-gaa", "shamrock-rovers"],
+    teams: ["ulster"],
   },
   {
     name: "Dublin",
@@ -453,7 +453,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["ulster", "dublin-gaa", "shamrock-rovers"],
+    teams: ["ulster"],
   },
   {
     name: "Galway",
@@ -492,7 +492,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["leinster", "dublin-gaa", "shamrock-rovers"],
+    teams: ["leinster"],
   },
   {
     name: "Kilkenny",
@@ -505,7 +505,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["leinster", "dublin-gaa", "shamrock-rovers"],
+    teams: ["leinster"],
   },
   {
     name: "Laois",
@@ -518,7 +518,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["leinster", "dublin-gaa", "shamrock-rovers"],
+    teams: ["leinster"],
   },
   {
     name: "Leitrim",
@@ -531,7 +531,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["connacht", "dublin-gaa", "shamrock-rovers"],
+    teams: ["connacht"],
   },
   {
     name: "Limerick",
@@ -557,7 +557,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["leinster", "longford-fc", "shamrock-rovers"],
+    teams: ["leinster", "longford-fc"],
   },
   {
     name: "Louth",
@@ -583,7 +583,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["connacht", "dublin-gaa", "shamrock-rovers"],
+    teams: ["connacht"],
   },
   {
     name: "Meath",
@@ -596,7 +596,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["leinster", "dublin-gaa", "shamrock-rovers"],
+    teams: ["leinster"],
   },
   ,
   {
@@ -610,7 +610,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["ulster", "dublin-gaa", "shamrock-rovers"],
+    teams: ["ulster"],
   },
   {
     name: "Offaly",
@@ -623,7 +623,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["leinster", "dublin-gaa", "shamrock-rovers"],
+    teams: ["leinster"],
   },
   {
     name: "Roscommon",
@@ -636,7 +636,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["connacht", "dublin-gaa", "shamrock-rovers"],
+    teams: ["connacht"],
   },
   {
     name: "Sligo",
@@ -662,7 +662,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["munster", "dublin-gaa", "shamrock-rovers"],
+    teams: ["munster"],
   },
   {
     name: "Tyrone",
@@ -675,7 +675,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["ulster", "dungannon-fc", "shamrock-rovers"],
+    teams: ["ulster", "dungannon-fc"],
   },
   {
     name: "Waterford",
@@ -701,20 +701,20 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["leinster", "athlone-fc", "shamrock-rovers"],
+    teams: ["leinster", "athlone-fc"],
   },
   {
     name: "Wexford",
     colors: ["#6B21A8", "#F6C324"],
     banner: "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcRk3VIMWFUCnaenT4pQmFbA8u7RQ6c8EoaMeB2GXu6ja6Cm6j0GiVGgFRbkFUKzdPzygGFulZr6-894OwXwOfzzL1d_&s=19",
-    blurb: "Temple Bar to Portobello; Whelan’s & Workman’s.",
+    blurb: "Quay‑front bars; theatres and trad sessions.",
     details: {
       bestFor: ["Live gigs", "Nightlife", "Museums"],
       signatureDrink: "A pint near Grafton",
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["leinster", "wexford-fc", "shamrock-rovers"],
+    teams: ["leinster", "wexford-fc"],
   },
   {
     name: "Wicklow",
@@ -727,7 +727,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["leinster", "bray-fc", "shamrock-rovers"],
+    teams: ["leinster", "bray-fc"],
   }
   // ... keep the rest of your counties here (they will fall back to defaults if details/teams omitted)
 ];
