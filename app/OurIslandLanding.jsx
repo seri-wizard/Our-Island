@@ -71,46 +71,86 @@ const teamsIndex = {
     note: "5th in United Rugby Championship",
   },
 
+
+  // GAA (county) Division 1A Hurling
+  "tipperary-gaa-hurling": {
+    name: "Tipperary GAA Hurling",
+    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/2/22/Tipperary_GAA_crest.svg/1200px-Tipperary_GAA_crest.svg.png",
+    note: "1st in Allianz Hurling League Division 1A",
+  },
+  "cork-gaa-hurling": {
+    name: "Cork GAA Hurling",
+    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/c/cd/Cork_GAA_crest.svg/1200px-Cork_GAA_crest.svg.png",
+    note: "2nd in Allianz Hurling League Division 1A",
+  },
+  "kilkenny-gaa-hurling": {
+    name: "Kilkenny GAA Hurling",
+    logo: "https://upload.wikimedia.org/wikipedia/en/2/2d/Kilkenny_GAA_Crest.jpeg",
+    note: "3rd in Allianz Hurling League Division 1A",
+  },
+  "galway-gaa-hurling": {
+    name: "Galway GAA Hurling",
+    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Galway_GAA_crest_2013.jpg/250px-Galway_GAA_crest_2013.jpg",
+    note: "4th in Allianz Hurling League Division 1A",
+  },
+  "limerick-gaa-hurling": {
+    name: "Limerick GAA Hurling",
+    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/3/31/Limerick_GAA_crest.jpg/250px-Limerick_GAA_crest.jpg",
+    note: "5th in Allianz Hurling League Division 1A",
+  },
+  "wexford-gaa-hurling": {
+    name: "Wexford GAA Hurling",
+    logo: "https://upload.wikimedia.org/wikipedia/en/3/35/Wexford_GAA_crest.svg",
+    note: "6th in Allianz Hurling League Division 1A",
+  },
+  "clare-gaa-hurling": {
+    name: "Clare GAA Hurling",
+    logo: "https://upload.wikimedia.org/wikipedia/en/c/ce/Clare_GAA_crest.png",
+    note: "7th in Allianz Hurling League Division 1A",
+  },
+
+  
+  
   // GAA (county) Division 1 Football
   "kerry-gaa-football": {
     name: "Kerry GAA Football",
     logo: "https://upload.wikimedia.org/wikipedia/en/3/39/Kerry_gaa_crest.png",
-    note: "2nd in Allianz Football League Division. 1",
+    note: "2nd in Allianz Football League Division 1",
   },
   "dublin-gaa-football": {
     name: "Dublin GAA Football",
     logo: "https://upload.wikimedia.org/wikipedia/en/thumb/c/cf/Dublin_GAA_crest.svg/1200px-Dublin_GAA_crest.svg.png",
-    note: "5th in Allianz Football League Division. 1",
+    note: "5th in Allianz Football League Division 1",
   },
   "galway-gaa-football": {
     name: "Galway GAA Football",
     logo: "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Galway_GAA_crest_2013.jpg/250px-Galway_GAA_crest_2013.jpg",
-    note: "3rd in Allianz Football League Division. 1",
+    note: "3rd in Allianz Football League Division 1",
   },
   "mayo-gaa-football": {
     name: "Mayo GAA Football",
     logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/MayoSVG.svg/1200px-MayoSVG.svg.png",
-    note: "1st in Allianz Football League Division. 1",
+    note: "1st in Allianz Football League Division 1",
   },
   "donegal-gaa-football": {
     name: "Donegal GAA Football",
     logo: "https://upload.wikimedia.org/wikipedia/en/0/01/Donegal_GAA_crest.png",
-    note: "4th in Allianz Football League Division. 1",
+    note: "4th in Allianz Football League Division 1",
   },
   "armagh-gaa-football": {
     name: "Armagh GAA Football",
     logo: "https://upload.wikimedia.org/wikipedia/en/5/51/Armagh_GAA_crest.png",
-    note: "6th in Allianz Football League Division. 1",
+    note: "6th in Allianz Football League Division 1",
   },
   "tyrone-gaa-football": {
     name: "Tyrone GAA Football",
     logo: "https://upload.wikimedia.org/wikipedia/en/2/23/Tyrone_gaa_logo.png",
-    note: "7th in Allianz Football League Division. 1",
+    note: "7th in Allianz Football League Division 1",
   },
   "derry-gaa-football": {
     name: "Derry GAA Football",
     logo: "https://upload.wikimedia.org/wikipedia/en/5/5e/Derry_Crest_GAA.png",
-    note: "8th in Allianz Football League Division. 1",
+    note: "8th in Allianz Football League Division 1",
   },  
 
 
@@ -118,42 +158,42 @@ const teamsIndex = {
   "monaghan-gaa-football": {
     name: "Monaghan GAA Football",
     logo: "https://upload.wikimedia.org/wikipedia/en/a/a0/Monaghan_GAA_crest.jpg",
-    note: "1st in Allianz Football League Division. 2",
+    note: "1st in Allianz Football League Division 2",
   },
   "roscommon-gaa-football": {
     name: "Roscommon GAA Football",
     logo: "https://upload.wikimedia.org/wikipedia/en/thumb/c/cf/Roscommon_GAA_crest.svg/1200px-Roscommon_GAA_crest.svg.png",
-    note: "2nd in Allianz Football League Division. 2",
+    note: "2nd in Allianz Football League Division 2",
   },
   "meath-gaa-football": {
     name: "Meath GAA Football",
     logo: "https://upload.wikimedia.org/wikipedia/en/thumb/d/d2/Meath_GAA_crest.svg/1200px-Meath_GAA_crest.svg.png",
-    note: "3rd in Allianz Football League Division. 2",
+    note: "3rd in Allianz Football League Division 2",
   },
   "cork-gaa-football": {
     name: "Cork GAA Football",
     logo: "https://upload.wikimedia.org/wikipedia/en/thumb/c/cd/Cork_GAA_crest.svg/1200px-Cork_GAA_crest.svg.png",
-    note: "5th in Allianz Football League Division. 2",
+    note: "5th in Allianz Football League Division 2",
   },
   "cavan-gaa-football": {
     name: "Cavan GAA Football",
     logo: "https://upload.wikimedia.org/wikipedia/en/c/c4/Cavan_GAA_crest.png",
-    note: "4th in Allianz Football League Division. 2",
+    note: "4th in Allianz Football League Division 2",
   },
   "louth-gaa-football": {
     name: "Louth GAA Football",
     logo: "https://upload.wikimedia.org/wikipedia/en/c/ce/Louth_GAA_crest.jpg",
-    note: "6th in Allianz Football League Division. 2",
+    note: "6th in Allianz Football League Division 2",
   },
   "down-gaa-football": {
     name: "Down GAA Football",
     logo: "https://upload.wikimedia.org/wikipedia/en/2/2a/Down_GAA_crest.png",
-    note: "7th in Allianz Football League Division. 2",
+    note: "7th in Allianz Football League Division 2",
   },
   "westmeath-gaa-football": {
     name: "Westmeath GAA Football",
     logo: "https://upload.wikimedia.org/wikipedia/en/b/b8/Westmeath_GAA_crest.jpg",
-    note: "8th in Allianz Football League Division. 2",
+    note: "8th in Allianz Football League Division 2",
   },  
 
 
@@ -447,7 +487,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["munster"],
+    teams: ["munster", "clare-gaa-hurling"],
   },
   {
     name: "Cork",
@@ -460,7 +500,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["munster", "cobh-fc", "cork-fc", "ballincollig-basketball", "cork-gaa-football"],
+    teams: ["munster", "cobh-fc", "cork-fc", "ballincollig-basketball", "cork-gaa-football", "cork-gaa-hurling"],
   },
   {
     name: "Derry",
@@ -538,7 +578,7 @@ const counties = [
       traditions: ["Sessions", "Rugby days"],
       notableVenues: ["Tig Chóilí", "Róisín Dubh", "The Crane Bar"],
     },
-    teams: ["connacht", "galway-fc", "galway-united", "galway-gaa-football"],
+    teams: ["connacht", "galway-fc", "galway-united", "galway-gaa-football", "galway-gaa-hurling"],
   },
   {
     name: "Kerry",
@@ -577,7 +617,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["leinster"],
+    teams: ["leinster", "kilkenny-gaa-hurling"],
   },
   {
     name: "Laois",
@@ -616,7 +656,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["munster", "treaty-fc", "limerick-celtics"],
+    teams: ["munster", "treaty-fc", "limerick-celtics", "limerick-gaa-hurling"],
   },
   {
     name: "Longford",
@@ -734,7 +774,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["munster"],
+    teams: ["munster", "tipperary-gaa-hurling"],
   },
   {
     name: "Tyrone",
@@ -786,7 +826,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["leinster", "wexford-fc"],
+    teams: ["leinster", "wexford-fc", "wexford-gaa-hurling"],
   },
   {
     name: "Wicklow",
