@@ -1178,7 +1178,7 @@ export default function OurIslandLanding() {
               Galway:  { left: 28, top: 42 },  // West, slightly north of Limerick
               Belfast: { left: 70, top: 14 },  // Northeast
               Cork:    { left: 43, top: 76 },  // South, a bit east of Limerick
-              Derry:   { left: 49, top: 08 },  // Far northwest
+              Derry:   { left: 49, top: 10 },  // Far northwest
               Limerick:{ left: 36, top: 63 },  // Mid-west/south-west
             };
 
