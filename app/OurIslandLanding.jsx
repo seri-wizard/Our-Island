@@ -696,7 +696,7 @@ const counties = [
   {
     name: "Galway",
     colors: ["#7A1F5C", "#FFFFFF"],
-    banner: "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSydXHWkuMzXiLpZHXoI6uNshU6FlzoyhkZeAfJvdLps3TGIChcRmbPuwT_LA0Vgewdvllqa02-mWMOJh-s8PsqJxUrozxgsO2PohPjcOS-SXf7SmaLi7GpkB_58IW0-JpfAzze65g=w540-h312-n-k-no",
+    banner: "https://www.tuatha.ie/wp-content/uploads/2024/01/Kylemore-Abbey-Featured-Image.webp",
     blurb: "Latin Quarter buskers; Tig Chóilí & Róisín Dubh.",
     details: {
       bestFor: ["Buskers", "Trad", "Nightlife"],
@@ -709,7 +709,7 @@ const counties = [
   {
     name: "Kerry",
     colors: ["#169B62", "#F6C324"],
-    banner: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Skellig_Michael03%28js%29.jpg/1200px-Skellig_Michael03%28js%29.jpg",
+    banner: "https://images.unsplash.com/photo-1502085671122-2d218cd434e6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2tlbGxpZyUyMG1pY2hhZWx8ZW58MHx8MHx8fDA%3D&fm=jpg&q=60&w=3000",
     blurb: "Killarney & Dingle nights; fireside trad.",
     details: {
       bestFor: ["Trad trail", "Coastal pubs", "Road-trip vibes"],
