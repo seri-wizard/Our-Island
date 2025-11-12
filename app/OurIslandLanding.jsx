@@ -1252,9 +1252,9 @@ className="rounded-3xl border border-white/10 bg-white/5 p-5"
         </div>
       </section>
 
-      // Add these helpers in the same component scope as the modal:
+// Helpers (place inside your component, above the return/JSX)
 const GOLD = "#F6C324";
-const isFirst = (note?: string) => /\b1st\b/i.test(note || "");
+const isFirst = (note) => /\b1st\b/i.test(note || "");
 
 /* ----- CENTERED MODAL ----- */
 <AnimatePresence>
@@ -1327,10 +1327,10 @@ const isFirst = (note?: string) => /\b1st\b/i.test(note || "");
             <div className="mt-6">
               <div className="mb-2 text-xs text-white/60">Football</div>
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                {(modalData?.teams || []).map((t: any) => {
+                {(modalData?.teams || []).map((t) => {
                   // Supports either strings or objects { slug, note }
                   const slug = typeof t === "string" ? t : t.slug;
-                  const note = typeof t === "string" ? modalData?.teamNotes?.[t] : t.note;
+                  const note = typeof t === "string" ? modalData?.teamNotes?.[t] : t?.note;
 
                   const first = isFirst(note);
                   const ringClasses = first
@@ -1341,8 +1341,8 @@ const isFirst = (note?: string) => /\b1st\b/i.test(note || "");
                     <div
                       key={slug}
                       className={`rounded-2xl border border-white/10 p-2 ${ringClasses}`}
-                      style={{ ["--gold" as any]: GOLD }}
-                      title={note}
+                      style={{ "--gold": GOLD }}
+                      title={note || undefined}
                     >
                       <TeamBadge slug={slug} />
                     </div>
@@ -1356,6 +1356,7 @@ const isFirst = (note?: string) => /\b1st\b/i.test(note || "");
     </div>
   )}
 </AnimatePresence>
+
 
 
       {/* Footer */}
