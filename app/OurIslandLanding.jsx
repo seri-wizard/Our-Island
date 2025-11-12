@@ -283,6 +283,22 @@ const teamsIndex = {
     note: "6th Elite Ice Hockey League",
   },
 
+  "craigavon-cowboys": {
+    name: "Craigavon Cowboys",
+    logo: "https://www.americanfootball.ie/wp-content/uploads/2020/08/Logo-Craigavon-Cowboys-2-e1597523556599-128x125.png",
+    note: "5th in Premier Division",
+  },  
+  "ul-vikings": {
+    name: "UL Vikings",
+    logo: "https://www.americanfootball.ie/wp-content/uploads/2020/08/Logo-UL-Vikings-e1597524202323-125x128.png",
+    note: "6th in Premier Division",
+  }, 
+  "cork-admirals": {
+    name: "Cork Admirals",
+    logo: "https://www.americanfootball.ie/wp-content/uploads/2020/08/Logo-Cork-Admirals-2-e1597524029691-128x97.png",
+    note: "8th in Premier Division",
+  },  
+
   "belfast-star": {
     name: "Belfast Star Basketball Club",
     logo: "https://cdn.leverade.com/thumbnails/AaaX4E8ZU0JP.500x500.jpg",
@@ -525,7 +541,7 @@ const counties = [
       traditions: ["Set dancing", "Match nights"],
       notableVenues: ["Dick Mack's (Dingle)", "Courtney's (Killarney)", "O'Connor's (Doolin)"]
     },
-    teams: ["ulster", "armagh-gaa-football"],
+    teams: ["ulster", "armagh-gaa-football", "craigavon-cowboys"],
   },  
   {
     name: "Carlow",
@@ -577,7 +593,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["munster", "cobh-fc", "cork-fc", "ballincollig-basketball", "cork-gaa-football", "cork-gaa-hurling"],
+    teams: ["munster", "cobh-fc", "cork-fc", "ballincollig-basketball", , "cork-admirals", "cork-gaa-football", "cork-gaa-hurling"],
   },
   {
     name: "Derry",
@@ -733,7 +749,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["munster", "treaty-fc", "limerick-celtics", "limerick-gaa-hurling"],
+    teams: ["munster", "treaty-fc", "limerick-celtics", "ul-vikings", "limerick-gaa-hurling"],
   },
   {
     name: "Longford",
