@@ -1150,32 +1150,75 @@ export default function OurIslandLanding() {
 
           {/* Hero Card (trimmed for brevity) */}
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15, duration: 0.6 }}>
-            <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-[#0B1222] p-6 shadow-2xl">
-              <div className="absolute right-[-10%] top-[-10%] h-56 w-56 rounded-full opacity-40 blur-2xl" style={{ background: palette.green }} />
-              <div className="absolute bottom-[-20%] left-[-10%] h-64 w-64 rounded-full opacity-30 blur-2xl" style={{ background: palette.orange }} />
-              <div className="relative">
-                <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-2 py-1 text-[11px] text-white/80"><span className="h-2 w-2 rounded-full" style={{ background: palette.green }} /> Preview Map</div>
-                <div className="rounded-2xl border border-white/10 bg-[#0B1222] p-4">
-                  <div className="relative h-64 w-full overflow-hidden rounded-xl">
-                    <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, #ffffff 1px, transparent 1px)", backgroundSize: "24px 24px" }} />
-                    {["Dublin", "Galway", "Belfast", "Cork", "Derry", "Limerick"].map((city, i) => (
-                      <motion.div key={city} className="absolute" initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.2 + i * 0.08 }} style={{ left: `${10 + i * 14}%`, top: `${20 + (i % 3) * 22}%` }}>
-                        <div className="flex items-center gap-2">
-                          <span className="relative inline-flex h-2 w-2"><span className="absolute inline-flex h-2 w-2 rounded-full" style={{ background: palette.orange }}></span><span className="absolute inline-flex h-2 w-2 animate-ping rounded-full opacity-75" style={{ background: palette.orange }}></span></span>
-                          <span className="text-[11px] text-white/80">{city}</span>
-                        </div>
-                      </motion.div>
-                    ))}
+  <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-[#0B1222] p-6 shadow-2xl">
+    <div className="absolute right-[-10%] top-[-10%] h-56 w-56 rounded-full opacity-40 blur-2xl" style={{ background: palette.green }} />
+    <div className="absolute bottom-[-20%] left-[-10%] h-64 w-64 rounded-full opacity-30 blur-2xl" style={{ background: palette.orange }} />
+
+    <div className="relative">
+      <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-2 py-1 text-[11px] text-white/80">
+        <span className="h-2 w-2 rounded-full" style={{ background: palette.green }} />
+        Preview Map
+      </div>
+
+      <div className="rounded-2xl border border-white/10 bg-[#0B1222] p-4">
+        <div className="relative h-64 w-full overflow-hidden rounded-xl">
+          {/* Subtle dotted grid */}
+          <div
+            className="absolute inset-0 opacity-20"
+            style={{
+              backgroundImage: "radial-gradient(circle at 1px 1px, #ffffff 1px, transparent 1px)",
+              backgroundSize: "24px 24px"
+            }}
+          />
+
+          {/* Hand-tuned city positions (percent of container) */}
+          {(() => {
+            const cityPositions = {
+              Dublin:  { left: 76, top: 40 },  // East coast, mid-latitude
+              Galway:  { left: 24, top: 42 },  // West, slightly north of Limerick
+              Belfast: { left: 70, top: 22 },  // Northeast
+              Cork:    { left: 46, top: 72 },  // South, a bit east of Limerick
+              Derry:   { left: 12, top: 18 },  // Far northwest
+              Limerick:{ left: 34, top: 56 },  // Mid-west/south-west
+            };
+
+            const cities = ["Dublin", "Galway", "Belfast", "Cork", "Derry", "Limerick"];
+
+            return cities.map((city, i) => {
+              const pos = cityPositions[city];
+              return (
+                <motion.div
+                  key={city}
+                  className="absolute"
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.2 + i * 0.08 }}
+                  style={{ left: `${pos.left}%`, top: `${pos.top}%` }}
+                >
+                  <div className="flex items-center gap-2">
+                    <span className="relative inline-flex h-2 w-2">
+                      <span className="absolute inline-flex h-2 w-2 rounded-full" style={{ background: palette.orange }} />
+                      <span className="absolute inline-flex h-2 w-2 animate-ping rounded-full opacity-75" style={{ background: palette.orange }} />
+                    </span>
+                    <span className="text-[11px] text-white/80">{city}</span>
                   </div>
-                </div>
-                <p className="mt-3 text-sm text-white/70">A real, filterable map of venues and traditions is coming soon. Want your place featured at launch?</p>
-                <div className="mt-3 flex gap-3">
-                  <a href="#submit" className="rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-xs font-medium hover:bg-white/10">Submit a place</a>
-                  <a href="#volunteer" className="rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-xs font-medium hover:bg-white/10">Volunteer</a>
-                </div>
-              </div>
-            </div>
-          </motion.div>
+                </motion.div>
+              );
+            });
+          })()}
+        </div>
+      </div>
+
+      <p className="mt-3 text-sm text-white/70">
+        A real, filterable map of venues and traditions is coming soon. Want your place featured at launch?
+      </p>
+      <div className="mt-3 flex gap-3">
+        <a href="#submit" className="rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-xs font-medium hover:bg-white/10">Submit a place</a>
+        <a href="#volunteer" className="rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-xs font-medium hover:bg-white/10">Volunteer</a>
+      </div>
+    </div>
+  </div>
+</motion.div>
         </div>
       </section>
 
