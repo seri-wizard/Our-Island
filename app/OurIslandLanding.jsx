@@ -287,7 +287,19 @@ const teamsIndex = {
     name: "Craigavon Cowboys",
     logo: "https://www.americanfootball.ie/wp-content/uploads/2020/08/Logo-Craigavon-Cowboys-2-e1597523556599-128x125.png",
     note: "5th in Premier Division",
-  },  
+  },
+
+  "madden-raparees": {
+    name: "Madden Raparees GAC",
+    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/f/f6/Madden_Raparees_Gaelic_Athletic_Club_logo.png/250px-Madden_Raparees_Gaelic_Athletic_Club_logo.png",
+    note: "Winner Armagh Senior Football Championship",
+  }, 
+  "dr-crokes": {
+    name: "Dr Crokes GAA",
+    logo: "https://drcrokes.com/wp-content/uploads/2025/06/cropped-Header-Logo3-1-1.png",
+    note: "Winner Kerry Senior Football Championship",
+  },   
+  
   "ul-vikings": {
     name: "UL Vikings",
     logo: "https://www.americanfootball.ie/wp-content/uploads/2020/08/Logo-UL-Vikings-e1597524202323-125x128.png",
@@ -541,7 +553,7 @@ const counties = [
       traditions: ["Set dancing", "Match nights"],
       notableVenues: ["Dick Mack's (Dingle)", "Courtney's (Killarney)", "O'Connor's (Doolin)"]
     },
-    teams: ["ulster", "armagh-gaa-football", "craigavon-cowboys"],
+    teams: ["ulster", "craigavon-cowboys", "armagh-gaa-football", "madden-raparees"],
   },  
   {
     name: "Carlow",
@@ -684,7 +696,7 @@ const counties = [
       traditions: ["Set dancing", "Match nights"],
       notableVenues: ["Dick Mack's (Dingle)", "Courtney's (Killarney)", "O'Connor's (Doolin)"]
     },
-    teams: ["munster", "kerry-gaa-football", "kerry-fc", "kerry-gaa-hurling", "tralee-warriors", "kcyms"],
+    teams: ["munster",  "kerry-fc", "kerry-gaa-football", "dr-crokes", "kerry-gaa-hurling", "tralee-warriors", "kcyms"],
   },
   {
     name: "Kildare",
