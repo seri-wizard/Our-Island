@@ -37,10 +37,164 @@ const features = [
 // Quick island stats displayed under the hero
 const islandStats = {
   population: "7.2M", // editable
-  sizeKm2: "84,421", // editable (km²)
-  coastline: "7,527", // fixed
-  highest: "1,041"
+  sizeKm2: "84,421",   // editable (km²)
+  coastline: "7,527",  // fixed
+  highest: "1,041",
 };
+
+/**
+ * IrelandMapBox
+ * - Fetches Ireland outline SVG and renders a dotted/glowing coastline
+ * - Places glowing city points using rough lat/lon -> % mapping
+ * - Keeps your subtle dotted grid in the background
+ *
+ * Tip: If the outline scale looks slightly off, tweak `OUTLINE_TRANSFORM`.
+ */
+function IrelandMapBox() {
+  const [outlinePath, setOutlinePath] = useState<string | null>(null);
+
+  // Tune this if the outline needs nudging (depends on the source SVG's viewBox)
+  const OUTLINE_TRANSFORM = "translate(0,0) scale(0.095)";
+
+  useEffect(() => {
+    const url = "https://upload.wikimedia.org/wikipedia/commons/d/d7/Ireland-outline-detailed.svg";
+    (async () => {
+      try {
+        const txt = await (await fetch(url, { cache: "force-cache" })).text();
+        const doc = new DOMParser().parseFromString(txt, "image/svg+xml");
+        const paths = Array.from(doc.querySelectorAll("path"));
+
+        // Heuristic: pick the longest path as the coastline
+        const longest = paths
+          .map(p => ({ p, len: (p as any).getTotalLength ? (p as any).getTotalLength() : (p.getAttribute("d") || "").length }))
+          .sort((a, b) => b.len - a.len)[0]?.p;
+
+        setOutlinePath(longest?.getAttribute("d") || null);
+      } catch {
+        setOutlinePath(null); // fall back to faint image only
+      }
+    })();
+  }, []);
+
+  // Bounds (approx) of Ireland: lat 51.4..55.4 N, lon -10.5..-5.4 W
+  const bounds = { minLat: 51.4, maxLat: 55.4, minLon: -10.5, maxLon: -5.4 };
+  const toPct = ({ lat, lon }: { lat: number; lon: number }) => {
+    const x = ((lon - bounds.minLon) / (bounds.maxLon - bounds.minLon)) * 100; // east = bigger left%
+    const y = ((bounds.maxLat - lat) / (bounds.maxLat - bounds.minLat)) * 100; // south = bigger top%
+    return { x, y };
+  };
+
+  const cityData = [
+    { name: "Dublin",   lat: 53.35, lon: -6.26 },
+    { name: "Galway",   lat: 53.27, lon: -9.06 },
+    { name: "Belfast",  lat: 54.60, lon: -5.93 },
+    { name: "Cork",     lat: 51.90, lon: -8.47 },
+    { name: "Derry",    lat: 55.00, lon: -7.31 },
+    { name: "Limerick", lat: 52.66, lon: -8.63 },
+  ];
+
+  return (
+    <div className="relative h-64 w-full overflow-hidden rounded-xl">
+      {/* Subtle dotted grid */}
+      <div
+        className="absolute inset-0 opacity-20"
+        style={{
+          backgroundImage: "radial-gradient(circle at 1px 1px, #ffffff 1px, transparent 1px)",
+          backgroundSize: "24px 24px",
+        }}
+      />
+
+      {/* SVG overlay with dotted coastline + glowing dots */}
+      <svg className="absolute inset-0 h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
+        <defs>
+          {/* Glow for outline */}
+          <filter id="outlineGlow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="1.4" result="blur" />
+            <feMerge>
+              <feMergeNode in="blur" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+          {/* Glow for city dots */}
+          <filter id="dotGlow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="1.2" result="blur" />
+            <feMerge>
+              <feMergeNode in="blur" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+        </defs>
+
+        {/* Faint base image as a fail-safe if path parsing fails */}
+        <image
+          href="https://upload.wikimedia.org/wikipedia/commons/d/d7/Ireland-outline-detailed.svg"
+          x="0"
+          y="0"
+          width="100"
+          height="100"
+          opacity="0.10"
+          preserveAspectRatio="xMidYMid meet"
+        />
+
+        {/* Dotted coastline (rounded dash -> "points" look) */}
+        {outlinePath && (
+          <>
+            <path
+              d={outlinePath}
+              transform={OUTLINE_TRANSFORM}
+              fill="none"
+              stroke="white"
+              strokeOpacity="0.6"
+              strokeWidth="0.9"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeDasharray="0.001 4.2"
+              filter="url(#outlineGlow)"
+            />
+            <path
+              d={outlinePath}
+              transform={OUTLINE_TRANSFORM}
+              fill="none"
+              stroke="white"
+              strokeOpacity="0.95"
+              strokeWidth="0.6"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeDasharray="0.001 4.2"
+            />
+          </>
+        )}
+
+        {/* City dots + labels */}
+        {cityData.map((c, i) => {
+          const { x, y } = toPct(c);
+          return (
+            <g key={c.name} transform={`translate(${x}, ${y})`} style={{ pointerEvents: "none" }}>
+              {/* Pulsing outer ring (SVG-native) */}
+              <circle r="1.8" fill="none" stroke="currentColor" strokeOpacity="0.35">
+                <animate attributeName="r" values="1.8;4.5;1.8" dur="1.8s" repeatCount="indefinite" />
+                <animate attributeName="opacity" values="0.7;0;0" dur="1.8s" repeatCount="indefinite" />
+              </circle>
+
+              {/* Core glowing dot (uses CSS var from parent) */}
+              <circle r="1.2" filter="url(#dotGlow)" style={{ color: "var(--cityColor)" }} fill="currentColor" />
+
+              <text
+                x="3.2"
+                y="3"
+                fontSize="3"
+                fill="rgba(255,255,255,0.8)"
+                style={{ fontFamily: "ui-sans-serif, system-ui" }}
+              >
+                {c.name}
+              </text>
+            </g>
+          );
+        })}
+      </svg>
+    </div>
+  );
+}
 
 /**
  * TEAMS DIRECTORY (central, linkable)
@@ -1154,55 +1308,30 @@ export default function OurIslandLanding() {
     <div className="absolute right-[-10%] top-[-10%] h-56 w-56 rounded-full opacity-40 blur-2xl" style={{ background: palette.green }} />
     <div className="absolute bottom-[-20%] left-[-10%] h-64 w-64 rounded-full opacity-30 blur-2xl" style={{ background: palette.orange }} />
 
-    <div className="relative">
+    <div className="relative" id="map">
       <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-2 py-1 text-[11px] text-white/80">
         <span className="h-2 w-2 rounded-full" style={{ background: palette.green }} />
         Preview Map
       </div>
 
-      <div className="rounded-2xl border border-white/10 bg-[#0B1222] p-4">
-        <div className="relative h-64 w-full overflow-hidden rounded-xl">
-          {/* Subtle dotted grid */}
-          <div
-            className="absolute inset-0 opacity-20"
-            style={{
-              backgroundImage: "radial-gradient(circle at 1px 1px, #ffffff 1px, transparent 1px)",
-              backgroundSize: "24px 24px"
-            }}
-          />
+      <div
+        className="rounded-2xl border border-white/10 bg-[#0B1222] p-4"
+        style={{ "--cityColor": palette.orange } as React.CSSProperties}
+      >
+        <IrelandMapBox />
+      </div>
 
-          {/* Hand-tuned city positions (percent of container) */}
-          {(() => {
-            const cityPositions = {
-              Dublin:  { left: 76, top: 41 },  // East coast, mid-latitude
-              Galway:  { left: 28, top: 42 },  // West, slightly north of Limerick
-              Belfast: { left: 70, top: 14 },  // Northeast
-              Cork:    { left: 43, top: 76 },  // South, a bit east of Limerick
-              Derry:   { left: 49, top: 10 },  // Far northwest
-              Limerick:{ left: 36, top: 63 },  // Mid-west/south-west
-            };
+      <p className="mt-3 text-sm text-white/70">
+        A real, filterable map of venues and traditions is coming soon. Want your place featured at launch?
+      </p>
+      <div className="mt-3 flex gap-3">
+        <a href="#submit" className="rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-xs font-medium hover:bg-white/10">Submit a place</a>
+        <a href="#volunteer" className="rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-xs font-medium hover:bg-white/10">Volunteer</a>
+      </div>
+    </div>
+  </div>
+</motion.div>
 
-            const cities = ["Dublin", "Galway", "Belfast", "Cork", "Derry", "Limerick"];
-
-            return cities.map((city, i) => {
-              const pos = cityPositions[city];
-              return (
-                <motion.div
-                  key={city}
-                  className="absolute"
-                  initial={{ opacity: 0, scale: 0.5 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 0.2 + i * 0.08 }}
-                  style={{ left: `${pos.left}%`, top: `${pos.top}%` }}
-                >
-                  <div className="flex items-center gap-2">
-                    <span className="relative inline-flex h-2 w-2">
-                      <span className="absolute inline-flex h-2 w-2 rounded-full" style={{ background: palette.orange }} />
-                      <span className="absolute inline-flex h-2 w-2 animate-ping rounded-full opacity-75" style={{ background: palette.orange }} />
-                    </span>
-                    <span className="text-[11px] text-white/80">{city}</span>
-                  </div>
-                </motion.div>
               );
             });
           })()}
