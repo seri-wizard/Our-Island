@@ -1252,61 +1252,111 @@ className="rounded-3xl border border-white/10 bg-white/5 p-5"
         </div>
       </section>
 
-      {/* ----- CENTERED MODAL ----- */}
-      <AnimatePresence>
-        {isModalOpen && (
-          <div className="fixed inset-0 z-50">
-            <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={closeModal} />
-            <motion.div
-              className="absolute left-1/2 top-1/2 z-50 w-[min(92vw,720px)] max-h-[90vh] overflow-y-auto rounded-3xl border border-white/10 bg-[#0B1222] text-white shadow-2xl"
-              style={{ translateX: "-50%", translateY: "-50%", boxShadow: `${(modalData?.colors?.[0] || "#fff")}55 0px 0px 80px inset` }}
-              initial={{ opacity: 0, scale: 0.96, y: 12 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.96, y: 12 }}
-              role="dialog" aria-modal="true" aria-label={`${modalKind === "county" ? "County" : "City"} spotlight`}
-            >
-              {/* Banner */}
-              <div className="relative h-40 w-full">
-                <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${modalData?.banner})` }} />
-                <div className="absolute inset-0 mix-blend-screen opacity-70" style={{ background: `linear-gradient(90deg, ${modalData?.colors?.[0]}, ${modalData?.colors?.[1] || modalData?.colors?.[0]}${modalData?.colors?.[2] ? ", " + modalData?.colors?.[2] : ""})` }} />
-              </div>
+      // Add these helpers in the same component scope as the modal:
+const GOLD = "#F6C324";
+const isFirst = (note?: string) => /\b1st\b/i.test(note || "");
 
-              <div className="p-6">
-                <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-2 py-1 text-[11px] text-white/70"><span className="h-1.5 w-1.5 rounded-full" style={{ background: modalData?.colors?.[0] }} /> {modalKind === "county" ? "County" : "City"} spotlight</div>
+/* ----- CENTERED MODAL ----- */
+<AnimatePresence>
+  {isModalOpen && (
+    <div className="fixed inset-0 z-50">
+      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={closeModal} />
+      <motion.div
+        className="absolute left-1/2 top-1/2 z-50 w-[min(92vw,720px)] max-h-[90vh] overflow-y-auto rounded-3xl border border-white/10 bg-[#0B1222] text-white shadow-2xl"
+        style={{ translateX: "-50%", translateY: "-50%", boxShadow: `${(modalData?.colors?.[0] || "#fff")}55 0px 0px 80px inset` }}
+        initial={{ opacity: 0, scale: 0.96, y: 12 }}
+        animate={{ opacity: 1, scale: 1, y: 0 }}
+        exit={{ opacity: 0, scale: 0.96, y: 12 }}
+        role="dialog" aria-modal="true" aria-label={`${modalKind === "county" ? "County" : "City"} spotlight`}
+      >
+        {/* Banner */}
+        <div className="relative h-40 w-full">
+          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${modalData?.banner})` }} />
+          <div
+            className="absolute inset-0 mix-blend-screen opacity-70"
+            style={{
+              background: `linear-gradient(90deg, ${modalData?.colors?.[0]}, ${modalData?.colors?.[1] || modalData?.colors?.[0]}${
+                modalData?.colors?.[2] ? ", " + modalData?.colors?.[2] : ""
+              })`
+            }}
+          />
+        </div>
 
-                <div className="flex items-start justify-between gap-4">
-                  <div>
-                    <h3 className="text-2xl font-semibold tracking-tight">{modalData?.name}</h3>
-                    <p className="mt-2 max-w-prose text-sm text-white/80">{modalData?.blurb || "Pubs, music, and community at the heart of the scene."}</p>
-                    {modalData?.motto && <p className="mt-2 text-sm italic text-white/70">“{modalData.motto}”</p>}
-                    {modalData?.prideQuote && <p className="mt-2 text-sm text-emerald-300/90">{modalData.prideQuote}</p>}
-                  </div>
-                  <button onClick={closeModal} className="rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-sm hover:bg-white/10">Close</button>
-                </div>
-
-                {/* Dynamic details */}
-                <div className="mt-5 grid grid-cols-1 gap-4 md:grid-cols-3">
-                  <div className="rounded-2xl border border-white/10 bg-white/5 p-4"><div className="mb-1 text-xs text-white/60">Best for</div><div className="text-sm text-white/80">{(modalData?.details?.bestFor || []).join(" • ")}</div></div>
-                  <div className="rounded-2xl border border-white/10 bg-white/5 p-4"><div className="mb-1 text-xs text-white/60">Signature</div><div className="text-sm text-white/80">{modalData?.details?.signatureDrink}</div></div>
-                  <div className="rounded-2xl border border-white/10 bg-white/5 p-4"><div className="mb-1 text-xs text-white/60">Traditions</div><div className="text-sm text-white/80">{(modalData?.details?.traditions || []).join(" • ")}</div></div>
-                </div>
-
-                <div className="mt-5 rounded-2xl border border-white/10 bg-white/5 p-4"><div className="mb-1 text-xs text-white/60">Notable venues</div><div className="text-sm text-white/80">{(modalData?.details?.notableVenues || []).join(" • ")}</div></div>
-
-                {/* Linked teams */}
-                {modalData?.teams?.length ? (
-                  <div className="mt-6">
-                    <div className="mb-2 text-xs text-white/60">Football</div>
-                    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                      {modalData.teams.map((slug) => <TeamBadge key={slug} slug={slug} />)}
-                    </div>
-                  </div>
-                ) : null}
-              </div>
-            </motion.div>
+        <div className="p-6">
+          <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-2 py-1 text-[11px] text-white/70">
+            <span className="h-1.5 w-1.5 rounded-full" style={{ background: modalData?.colors?.[0] }} /> {modalKind === "county" ? "County" : "City"} spotlight
           </div>
-        )}
-      </AnimatePresence>
+
+          <div className="flex items-start justify-between gap-4">
+            <div>
+              <h3 className="text-2xl font-semibold tracking-tight">{modalData?.name}</h3>
+              <p className="mt-2 max-w-prose text-sm text-white/80">
+                {modalData?.blurb || "Pubs, music, and community at the heart of the scene."}
+              </p>
+              {modalData?.motto && <p className="mt-2 text-sm italic text-white/70">“{modalData.motto}”</p>}
+              {modalData?.prideQuote && <p className="mt-2 text-sm text-emerald-300/90">{modalData.prideQuote}</p>}
+            </div>
+            <button onClick={closeModal} className="rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-sm hover:bg-white/10">
+              Close
+            </button>
+          </div>
+
+          {/* Dynamic details */}
+          <div className="mt-5 grid grid-cols-1 gap-4 md:grid-cols-3">
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
+              <div className="mb-1 text-xs text-white/60">Best for</div>
+              <div className="text-sm text-white/80">{(modalData?.details?.bestFor || []).join(" • ")}</div>
+            </div>
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
+              <div className="mb-1 text-xs text-white/60">Signature</div>
+              <div className="text-sm text-white/80">{modalData?.details?.signatureDrink}</div>
+            </div>
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
+              <div className="mb-1 text-xs text-white/60">Traditions</div>
+              <div className="text-sm text-white/80">{(modalData?.details?.traditions || []).join(" • ")}</div>
+            </div>
+          </div>
+
+          <div className="mt-5 rounded-2xl border border-white/10 bg-white/5 p-4">
+            <div className="mb-1 text-xs text-white/60">Notable venues</div>
+            <div className="text-sm text-white/80">{(modalData?.details?.notableVenues || []).join(" • ")}</div>
+          </div>
+
+          {/* Linked teams */}
+          {modalData?.teams?.length ? (
+            <div className="mt-6">
+              <div className="mb-2 text-xs text-white/60">Football</div>
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                {(modalData?.teams || []).map((t: any) => {
+                  // Supports either strings or objects { slug, note }
+                  const slug = typeof t === "string" ? t : t.slug;
+                  const note = typeof t === "string" ? modalData?.teamNotes?.[t] : t.note;
+
+                  const first = isFirst(note);
+                  const ringClasses = first
+                    ? "ring-2 ring-[--gold] ring-offset-2 ring-offset-[#0B1222]"
+                    : "";
+
+                  return (
+                    <div
+                      key={slug}
+                      className={`rounded-2xl border border-white/10 p-2 ${ringClasses}`}
+                      style={{ ["--gold" as any]: GOLD }}
+                      title={note}
+                    >
+                      <TeamBadge slug={slug} />
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          ) : null}
+        </div>
+      </motion.div>
+    </div>
+  )}
+</AnimatePresence>
+
 
       {/* Footer */}
       <footer className="relative z-10 border-t border-white/10 px-6 py-10 text-sm text-white/60">
