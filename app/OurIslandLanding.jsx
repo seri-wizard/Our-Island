@@ -299,6 +299,11 @@ const teamsIndex = {
     logo: "https://drcrokes.com/wp-content/uploads/2025/06/cropped-Header-Logo3-1-1.png",
     note: "Winner Kerry Senior Football Championship",
   },   
+  "abbeydorney-gaa": {
+    name: "Abbeydorney GAA",
+    logo: "https://upload.wikimedia.org/wikipedia/en/5/5b/Abbeydorney_GAA_crest.png",
+    note: "Winner Kerry Senior Hurling Championship",
+  },  
   
   "ul-vikings": {
     name: "UL Vikings",
@@ -696,7 +701,7 @@ const counties = [
       traditions: ["Set dancing", "Match nights"],
       notableVenues: ["Dick Mack's (Dingle)", "Courtney's (Killarney)", "O'Connor's (Doolin)"]
     },
-    teams: ["munster",  "kerry-fc", "kerry-gaa-football", "dr-crokes", "kerry-gaa-hurling", "tralee-warriors", "kcyms"],
+    teams: ["munster",  "kerry-fc", "kerry-gaa-football", "dr-crokes", "kerry-gaa-hurling", "abbeydorney-gaa", "tralee-warriors", "kcyms"],
   },
   {
     name: "Kildare",
