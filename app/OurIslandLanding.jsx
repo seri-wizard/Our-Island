@@ -72,22 +72,50 @@ const teamsIndex = {
   },
 
   // GAA (county)
-  "kerry-gaa": {
-    name: "Kerry GAA",
+  "kerry-gaa-football": {
+    name: "Kerry GAA Football",
     logo: "https://upload.wikimedia.org/wikipedia/en/3/39/Kerry_gaa_crest.png",
-    note: "Sam Maguire Winners 2025",
+    note: "2nd in Allianz Football League Div.1",
   },
-  "dublin-gaa": {
-    name: "Dublin GAA",
-    logo: "https://upload.wikimedia.org/wikipedia/en/0/03/Dublin_GAA_crest.svg",
-    note: "All-Ireland contenders",
+  "dublin-gaa-football": {
+    name: "Dublin GAA Football",
+    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/c/cf/Dublin_GAA_crest.svg/1200px-Dublin_GAA_crest.svg.png",
+    note: "5th in Allianz Football League Div.1",
   },
-  "galway-gaa": {
-    name: "Galway GAA",
-    logo: "https://upload.wikimedia.org/wikipedia/en/8/82/Galway_GAA_crest.svg",
-    note: "Football & Hurling power",
+  "galway-gaa-football": {
+    name: "Galway GAA Football",
+    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/2/23/Galway_GAA_crest_2013.jpg/250px-Galway_GAA_crest_2013.jpg",
+    note: "3rd in Allianz Football League Div.1",
   },
+  "mayo-gaa-football": {
+    name: "Mayo GAA Football",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/MayoSVG.svg/1200px-MayoSVG.svg.png",
+    note: "1st in Allianz Football League Div.1",
+  },
+  "donegal-gaa-football": {
+    name: "Donegal GAA Football",
+    logo: "https://upload.wikimedia.org/wikipedia/en/0/01/Donegal_GAA_crest.png",
+    note: "4th in Allianz Football League Div.1",
+  },
+  "armagh-gaa-football": {
+    name: "Armagh GAA Football",
+    logo: "https://upload.wikimedia.org/wikipedia/en/5/51/Armagh_GAA_crest.png",
+    note: "6th in Allianz Football League Div.1",
+  },
+  "tyrone-gaa-football": {
+    name: "Tyrone GAA Football",
+    logo: "https://upload.wikimedia.org/wikipedia/en/2/23/Tyrone_gaa_logo.png",
+    note: "7th in Allianz Football League Div.1",
+  },
+  "derry-gaa-football": {
+    name: "Derry GAA Football",
+    logo: "https://upload.wikimedia.org/wikipedia/en/5/5e/Derry_Crest_GAA.png",
+    note: "8th in Allianz Football League Div.1",
+  },  
 
+
+
+  
   "belfast-giants": {
     name: "Belfast Giants",
     logo: "https://www.eliteleague.co.uk/photo/team/team_4.png",
@@ -336,7 +364,7 @@ const counties = [
       traditions: ["Set dancing", "Match nights"],
       notableVenues: ["Dick Mack's (Dingle)", "Courtney's (Killarney)", "O'Connor's (Doolin)"]
     },
-    teams: ["ulster"],
+    teams: ["ulster", "armagh-gaa-football"],
   },  
   {
     name: "Carlow",
@@ -401,7 +429,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["ulster", "derry-fc", "coleraine-fc"],
+    teams: ["ulster", "derry-fc", "coleraine-fc", "derry-gaa-football"],
   },
   {
     name: "Donegal",
@@ -414,7 +442,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["ulster", "finn-fc"],
+    teams: ["ulster", "finn-fc", "derry-gaa-football"],
   },
   {
     name: "Down",
@@ -440,7 +468,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["leinster", "ucd-fc", "shamrock-rovers", "shelbourne-fc", "bohemian-fc", "pats-fc"],
+    teams: ["leinster", "dublin-gaa-football", "ucd-fc", "shamrock-rovers", "shelbourne-fc", "bohemian-fc", "pats-fc"],
   },
     {
     name: "Fermanagh",
@@ -466,7 +494,7 @@ const counties = [
       traditions: ["Sessions", "Rugby days"],
       notableVenues: ["Tig Chóilí", "Róisín Dubh", "The Crane Bar"],
     },
-    teams: ["connacht", "galway-fc", "galway-united"],
+    teams: ["connacht", "galway-fc", "galway-united", "galway-gaa-football"],
   },
   {
     name: "Kerry",
@@ -479,7 +507,7 @@ const counties = [
       traditions: ["Set dancing", "Match nights"],
       notableVenues: ["Dick Mack's (Dingle)", "Courtney's (Killarney)", "O'Connor's (Doolin)"]
     },
-    teams: ["munster", "kerry-gaa", "kerry-fc", "tralee-warriors", "kcyms"],
+    teams: ["munster", "kerry-gaa-football", "kerry-fc", "tralee-warriors", "kcyms"],
   },
   {
     name: "Kildare",
@@ -583,7 +611,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["connacht"],
+    teams: ["connacht", "mayo-gaa-football"],
   },
   {
     name: "Meath",
@@ -675,7 +703,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["ulster", "dungannon-fc"],
+    teams: ["ulster", "dungannon-fc", "tyrone-gaa-football"],
   },
   {
     name: "Waterford",
@@ -688,7 +716,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["munster", "dublin-gaa", "waterford-fc"],
+    teams: ["munster", "waterford-fc"],
   },
   {
     name: "Westmeath",
