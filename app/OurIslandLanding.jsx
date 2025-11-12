@@ -219,6 +219,11 @@ const teamsIndex = {
     logo: "https://upload.wikimedia.org/wikipedia/en/5/51/Armagh_GAA_crest.png",
     note: "6th in Allianz Football League Division 1",
   },
+    "armagh-gaa-hurling": {
+    name: "Armagh GAA Hurling",
+    logo: "https://upload.wikimedia.org/wikipedia/en/5/51/Armagh_GAA_crest.png",
+    note: "5th in Allianz Hurling League Division 3",
+  },
   "tyrone-gaa-football": {
     name: "Tyrone GAA Football",
     logo: "https://upload.wikimedia.org/wikipedia/en/2/23/Tyrone_gaa_logo.png",
@@ -294,6 +299,12 @@ const teamsIndex = {
     logo: "https://upload.wikimedia.org/wikipedia/en/thumb/f/f6/Madden_Raparees_Gaelic_Athletic_Club_logo.png/250px-Madden_Raparees_Gaelic_Athletic_Club_logo.png",
     note: "Winner Armagh Senior Football Championship",
   }, 
+  "middletown-gaa": {
+    name: "Middletown GAA",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk7rkiFatoOM4riae3ENH0tgpV6qoCnlL7Qg&s",
+    note: "Winner Armagh Senior Hurling Championship",
+  }, 
+  
   "dr-crokes": {
     name: "Dr Crokes GAA",
     logo: "https://drcrokes.com/wp-content/uploads/2025/06/cropped-Header-Logo3-1-1.png",
@@ -558,7 +569,7 @@ const counties = [
       traditions: ["Set dancing", "Match nights"],
       notableVenues: ["Dick Mack's (Dingle)", "Courtney's (Killarney)", "O'Connor's (Doolin)"]
     },
-    teams: ["ulster", "craigavon-cowboys", "armagh-gaa-football", "madden-raparees"],
+    teams: ["ulster", "craigavon-cowboys", "armagh-gaa-football", "madden-raparees", "armagh-gaa-hurling", "middletown-gaa"],
   },  
   {
     name: "Carlow",
