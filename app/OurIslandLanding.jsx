@@ -109,6 +109,46 @@ const teamsIndex = {
     note: "7th in Allianz Hurling League Division 1A",
   },
 
+
+  // GAA (county) Division 1B Hurling
+  "waterford-gaa-hurling": {
+    name: "Waterford GAA Hurling",
+    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/5/5b/Waterford_GAA_crest.svg/1200px-Waterford_GAA_crest.svg.png",
+    note: "1st in Allianz Hurling League Division 1B",
+  },
+  "offaly-gaa-hurling": {
+    name: "Offaly GAA Hurling",
+    logo: "https://upload.wikimedia.org/wikipedia/en/b/bf/Offaly_GAA_crest.jpg",
+    note: "2nd in Allianz Hurling League Division 1B",
+  },
+  "dublin-gaa-hurling": {
+    name: "Dublin GAA Hurling",
+    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/c/cf/Dublin_GAA_crest.svg/1200px-Dublin_GAA_crest.svg.png",
+    note: "3rd in Allianz Hurling League Division 1B",
+  },
+  "carlow-gaa-hurling": {
+    name: "Carlow GAA Hurling",
+    logo: "https://upload.wikimedia.org/wikipedia/en/f/f8/Carlow_GAA_crest.png",
+    note: "4th in Allianz Hurling League Division 1B",
+  },
+  "antrim-gaa-hurling": {
+    name: "Antrim GAA Hurling",
+    logo: "https://upload.wikimedia.org/wikipedia/en/1/1a/Antrim_GAA_crest.png",
+    note: "5th in Allianz Hurling League Division 1B",
+  },
+  "laois-gaa-hurling": {
+    name: "Laois GAA Hurling",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8V6XQ2uif7CsS4GesJEoal3qxC34iAOIFYg&s",
+    note: "6th in Allianz Hurling League Division 1B",
+  },
+  "westmeath-gaa-hurling": {
+    name: "Westmeath GAA Hurling",
+    logo: "https://upload.wikimedia.org/wikipedia/en/b/b8/Westmeath_GAA_crest.jpg",
+    note: "7th in Allianz Hurling League Division 1B",
+  },
+
+  
+
   
   
   // GAA (county) Division 1 Football
@@ -435,7 +475,7 @@ const counties = [
       traditions: ["Set dancing", "Match nights"],
       notableVenues: ["Dick Mack's (Dingle)", "Courtney's (Killarney)", "O'Connor's (Doolin)"]
     },
-    teams: ["ulster", "belfast-star", "belfast-giants", "larne-fc", "glentoran-fc", "linfield-fc"],
+    teams: ["ulster", "antrim-gaa-hurling", "belfast-star", "belfast-giants", "larne-fc", "glentoran-fc", "linfield-fc"],
   },
   {
     name: "Armagh",
@@ -461,7 +501,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["leinster"],
+    teams: ["leinster", "carlow-gaa-hurling"],
   },
   {
     name: "Cavan",
@@ -552,7 +592,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["leinster", "dublin-gaa-football", "ucd-fc", "shamrock-rovers", "shelbourne-fc", "bohemian-fc", "pats-fc"],
+    teams: ["leinster", "dublin-gaa-football", "dublin-gaa-hurling", "ucd-fc", "shamrock-rovers", "shelbourne-fc", "bohemian-fc", "pats-fc"],
   },
     {
     name: "Fermanagh",
@@ -630,7 +670,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["leinster"],
+    teams: ["leinster", "laois-gaa-hurling"],
   },
   {
     name: "Leitrim",
@@ -735,7 +775,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["leinster"],
+    teams: ["leinster", "offaly-gaa-hurling"],
   },
   {
     name: "Roscommon",
@@ -800,7 +840,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["munster", "waterford-fc"],
+    teams: ["munster", "waterford-fc", "waterford-gaa-hurling"],
   },
   {
     name: "Westmeath",
@@ -813,7 +853,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["leinster", "athlone-fc", "westmeath-gaa-football"],
+    teams: ["leinster", "athlone-fc", "westmeath-gaa-football", "westmeath-gaa-hurling"],
   },
   {
     name: "Wexford",
