@@ -304,6 +304,11 @@ const teamsIndex = {
     logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk7rkiFatoOM4riae3ENH0tgpV6qoCnlL7Qg&s",
     note: "Winner Armagh Senior Hurling Championship",
   }, 
+  "st-martins": {
+    name: "St Martin's GAA",
+    logo: "https://wexfordgaa.ie/wp-content/uploads/2022/09/st-martins-new-trans.png",
+    note: "Winner Wexford Senior Hurling Championship",
+  }, 
   
   "dr-crokes": {
     name: "Dr Crokes GAA",
@@ -947,7 +952,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["leinster", "wexford-fc", "wexford-gaa-hurling"],
+    teams: ["leinster", "wexford-fc", "wexford-gaa-hurling", "st-martins"],
   },
   {
     name: "Wicklow",
