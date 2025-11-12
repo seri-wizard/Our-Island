@@ -43,33 +43,44 @@ const islandStats = {
 };
 
 /**
- * IrelandMapBox
+ * IrelandMapBox (JSX-safe)
  * - Fetches Ireland outline SVG and renders a dotted/glowing coastline
  * - Places glowing city points using rough lat/lon -> % mapping
- * - Keeps your subtle dotted grid in the background
- *
- * Tip: If the outline scale looks slightly off, tweak `OUTLINE_TRANSFORM`.
+ * - All plain JS (no TS casts) so it compiles in .jsx
  */
 function IrelandMapBox() {
-  const [outlinePath, setOutlinePath] = useState<string | null>(null);
+  const [outlinePath, setOutlinePath] = useState(null);
 
-  // Tune this if the outline needs nudging (depends on the source SVG's viewBox)
+  // Tweak if the outline needs nudging (depends on source SVG's viewBox)
   const OUTLINE_TRANSFORM = "translate(0,0) scale(0.095)";
 
   useEffect(() => {
     const url = "https://upload.wikimedia.org/wikipedia/commons/d/d7/Ireland-outline-detailed.svg";
     (async () => {
       try {
-        const txt = await (await fetch(url, { cache: "force-cache" })).text();
+        const resp = await fetch(url, { cache: "force-cache" });
+        const txt = await resp.text();
         const doc = new DOMParser().parseFromString(txt, "image/svg+xml");
         const paths = Array.from(doc.querySelectorAll("path"));
 
-        // Heuristic: pick the longest path as the coastline
+        // Heuristic: pick the longest path as the coastline (JS-only, no casts)
         const longest = paths
-          .map(p => ({ p, len: (p as any).getTotalLength ? (p as any).getTotalLength() : (p.getAttribute("d") || "").length }))
+          .map((p) => {
+            let len = 0;
+            try {
+              if (typeof p.getTotalLength === "function") {
+                len = p.getTotalLength();
+              } else {
+                len = (p.getAttribute("d") || "").length;
+              }
+            } catch (e) {
+              len = (p.getAttribute("d") || "").length;
+            }
+            return { p, len };
+          })
           .sort((a, b) => b.len - a.len)[0]?.p;
 
-        setOutlinePath(longest?.getAttribute("d") || null);
+        setOutlinePath(longest ? longest.getAttribute("d") : null);
       } catch {
         setOutlinePath(null); // fall back to faint image only
       }
@@ -78,7 +89,7 @@ function IrelandMapBox() {
 
   // Bounds (approx) of Ireland: lat 51.4..55.4 N, lon -10.5..-5.4 W
   const bounds = { minLat: 51.4, maxLat: 55.4, minLon: -10.5, maxLon: -5.4 };
-  const toPct = ({ lat, lon }: { lat: number; lon: number }) => {
+  const toPct = ({ lat, lon }) => {
     const x = ((lon - bounds.minLon) / (bounds.maxLon - bounds.minLon)) * 100; // east = bigger left%
     const y = ((bounds.maxLat - lat) / (bounds.maxLat - bounds.minLat)) * 100; // south = bigger top%
     return { x, y };
@@ -87,9 +98,9 @@ function IrelandMapBox() {
   const cityData = [
     { name: "Dublin",   lat: 53.35, lon: -6.26 },
     { name: "Galway",   lat: 53.27, lon: -9.06 },
-    { name: "Belfast",  lat: 54.60, lon: -5.93 },
-    { name: "Cork",     lat: 51.90, lon: -8.47 },
-    { name: "Derry",    lat: 55.00, lon: -7.31 },
+    { name: "Belfast",  lat: 54.6,  lon: -5.93 },
+    { name: "Cork",     lat: 51.9,  lon: -8.47 },
+    { name: "Derry",    lat: 55.0,  lon: -7.31 },
     { name: "Limerick", lat: 52.66, lon: -8.63 },
   ];
 
@@ -166,7 +177,7 @@ function IrelandMapBox() {
         )}
 
         {/* City dots + labels */}
-        {cityData.map((c, i) => {
+        {cityData.map((c) => {
           const { x, y } = toPct(c);
           return (
             <g key={c.name} transform={`translate(${x}, ${y})`} style={{ pointerEvents: "none" }}>
@@ -1303,7 +1314,7 @@ export default function OurIslandLanding() {
           </motion.div>
 
           {/* Hero Card (trimmed for brevity) */}
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15, duration: 0.6 }}>
+<motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15, duration: 0.6 }}>
   <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-[#0B1222] p-6 shadow-2xl">
     <div className="absolute right-[-10%] top-[-10%] h-56 w-56 rounded-full opacity-40 blur-2xl" style={{ background: palette.green }} />
     <div className="absolute bottom-[-20%] left-[-10%] h-64 w-64 rounded-full opacity-30 blur-2xl" style={{ background: palette.orange }} />
@@ -1316,26 +1327,9 @@ export default function OurIslandLanding() {
 
       <div
         className="rounded-2xl border border-white/10 bg-[#0B1222] p-4"
-        style={{ "--cityColor": palette.orange } as React.CSSProperties}
+        style={{ "--cityColor": palette.orange }}
       >
         <IrelandMapBox />
-      </div>
-
-      <p className="mt-3 text-sm text-white/70">
-        A real, filterable map of venues and traditions is coming soon. Want your place featured at launch?
-      </p>
-      <div className="mt-3 flex gap-3">
-        <a href="#submit" className="rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-xs font-medium hover:bg-white/10">Submit a place</a>
-        <a href="#volunteer" className="rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-xs font-medium hover:bg-white/10">Volunteer</a>
-      </div>
-    </div>
-  </div>
-</motion.div>
-
-              );
-            });
-          })()}
-        </div>
       </div>
 
       <p className="mt-3 text-sm text-white/70">
