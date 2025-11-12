@@ -1174,12 +1174,12 @@ export default function OurIslandLanding() {
           {/* Hand-tuned city positions (percent of container) */}
           {(() => {
             const cityPositions = {
-              Dublin:  { left: 76, top: 40 },  // East coast, mid-latitude
-              Galway:  { left: 24, top: 42 },  // West, slightly north of Limerick
-              Belfast: { left: 70, top: 22 },  // Northeast
-              Cork:    { left: 46, top: 72 },  // South, a bit east of Limerick
-              Derry:   { left: 12, top: 18 },  // Far northwest
-              Limerick:{ left: 34, top: 56 },  // Mid-west/south-west
+              Dublin:  { left: 76, top: 41 },  // East coast, mid-latitude
+              Galway:  { left: 28, top: 42 },  // West, slightly north of Limerick
+              Belfast: { left: 70, top: 14 },  // Northeast
+              Cork:    { left: 43, top: 76 },  // South, a bit east of Limerick
+              Derry:   { left: 49, top: 08 },  // Far northwest
+              Limerick:{ left: 36, top: 63 },  // Mid-west/south-west
             };
 
             const cities = ["Dublin", "Galway", "Belfast", "Cork", "Derry", "Limerick"];
