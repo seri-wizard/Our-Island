@@ -147,6 +147,43 @@ const teamsIndex = {
     note: "7th in Allianz Hurling League Division 1B",
   },
 
+
+  // GAA (county) Division 2 Hurling
+  "kildare-gaa-hurling": {
+    name: "Kildare GAA Hurling",
+    logo: "https://upload.wikimedia.org/wikipedia/en/d/de/Kildare_GAA_crest.png",
+    note: "1st in Allianz Hurling League Division 2",
+  },
+  "down-gaa-hurling": {
+    name: "Down GAA Hurling",
+    logo: "https://upload.wikimedia.org/wikipedia/en/2/2a/Down_GAA_crest.png",
+    note: "2nd in Allianz Hurling League Division 2",
+  },
+  "kerry-gaa-hurling": {
+    name: "Kerry GAA Hurling",
+    logo: "https://upload.wikimedia.org/wikipedia/en/3/39/Kerry_gaa_crest.png",
+    note: "3rd in Allianz Hurling League Division 2",
+  },
+  "meath-gaa-hurling": {
+    name: "Meath GAA Hurling",
+    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/d/d2/Meath_GAA_crest.svg/1200px-Meath_GAA_crest.svg.png",
+    note: "4th in Allianz Hurling League Division 2",
+  },
+  "derry-gaa-hurling": {
+    name: "Derry GAA Hurling",
+    logo: "https://upload.wikimedia.org/wikipedia/en/5/5e/Derry_Crest_GAA.png",
+    note: "5th in Allianz Hurling League Division 2",
+  },
+  "donegal-gaa-hurling": {
+    name: "Donegal GAA Hurling",
+    logo: "https://upload.wikimedia.org/wikipedia/en/0/01/Donegal_GAA_crest.png",
+    note: "6th in Allianz Hurling League Division 2",
+  },
+  "tyrone-gaa-hurling": {
+    name: "Tyrone GAA Hurling",
+    logo: "https://upload.wikimedia.org/wikipedia/en/2/23/Tyrone_gaa_logo.png",
+    note: "7th in Allianz Hurling League Division 2",
+  },
   
 
   
@@ -553,7 +590,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["ulster", "derry-fc", "coleraine-fc", "derry-gaa-football"],
+    teams: ["ulster", "derry-fc", "coleraine-fc", "derry-gaa-football", "derry-gaa-hurling"],
   },
   {
     name: "Donegal",
@@ -566,7 +603,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["ulster", "finn-fc", "donegal-gaa-football"],
+    teams: ["ulster", "finn-fc", "donegal-gaa-football", "donegal-gaa-hurling"],
   },
   {
     name: "Down",
@@ -579,7 +616,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["ulster", "down-gaa-football"],
+    teams: ["ulster", "down-gaa-football", "down-gaa-hurling"],
   },
   {
     name: "Dublin",
@@ -631,7 +668,7 @@ const counties = [
       traditions: ["Set dancing", "Match nights"],
       notableVenues: ["Dick Mack's (Dingle)", "Courtney's (Killarney)", "O'Connor's (Doolin)"]
     },
-    teams: ["munster", "kerry-gaa-football", "kerry-fc", "tralee-warriors", "kcyms"],
+    teams: ["munster", "kerry-gaa-football", "kerry-fc", "kerry-gaa-hurling", "tralee-warriors", "kcyms"],
   },
   {
     name: "Kildare",
@@ -644,7 +681,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["leinster"],
+    teams: ["leinster", "kildare-gaa-hurling"],
   },
   {
     name: "Kilkenny",
@@ -748,7 +785,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["leinster", "meath-gaa-football"],
+    teams: ["leinster", "meath-gaa-football", "meath-gaa-hurling"],
   },
   ,
   {
@@ -827,7 +864,7 @@ const counties = [
       traditions: ["Trad sessions", "Storytelling"],
       notableVenues: ["Whelan's", "The Cobblestone", "Workman's Club"],
     },
-    teams: ["ulster", "dungannon-fc", "tyrone-gaa-football"],
+    teams: ["ulster", "dungannon-fc", "tyrone-gaa-football", "tyrone-gaa-hurling"],
   },
   {
     name: "Waterford",
